@@ -1,9 +1,4 @@
 import {
-  UserOutlined,
-  HomeOutlined,
-  CalendarOutlined,
-  MessageOutlined,
-  CreditCardOutlined,
   SettingOutlined,
   EllipsisOutlined,
   SearchOutlined,
@@ -11,7 +6,7 @@ import {
 import { Layout, Menu, Avatar, Button } from "antd";
 import companyLogo from "../assets/companyLogo.png";
 import profile from "../assets/profile.png";
-import { sideMenuItems } from "../data/data";
+import { menuItems, sideMenuItems } from "../data/data";
 import { useState } from "react";
 
 const { Header, Content, Sider } = Layout;
@@ -20,59 +15,30 @@ const Dashboard = () => {
   const [selectedKey, setSelectedKey] = useState("4");
 
   const colorBgContainer = "#fff";
-  const borderRadiusLG = "8px";
 
   return (
     <Layout className="min-h-screen">
-      {/* Header */}
       <Header className="flex items-center justify-between px-4 bg-white">
-        {/* Logo Section */}
         <div className="flex items-center">
           <img src={companyLogo} alt="Tech.Care Logo" className="h-10 mr-3" />
         </div>
 
-        {/* Menu Items */}
         <Menu
           mode="horizontal"
           className="flex justify-center bg-transparent border-none"
         >
-          <Menu.Item
-            key="1"
-            icon={<HomeOutlined />}
-            className="text-sm font-semibold no-underline hover:no-underline"
-          >
-            Overview
-          </Menu.Item>
-          <Menu.Item
-            key="2"
-            icon={<UserOutlined />}
-            className="text-sm font-semibold text-white bg-[#01F0D0] w-[120px] mx-auto text-center rounded-full no-underline hover:no-underline"
-          >
-            Patients
-          </Menu.Item>
-          <Menu.Item
-            key="3"
-            icon={<CalendarOutlined />}
-            className="text-sm font-semibold no-underline hover:no-underline"
-          >
-            Schedule
-          </Menu.Item>
-          <Menu.Item
-            key="4"
-            icon={<MessageOutlined />}
-            className="text-sm font-semibold no-underline hover:no-underline"
-          >
-            Message
-          </Menu.Item>
-          <Menu.Item
-            key="5"
-            icon={<CreditCardOutlined />}
-            className="text-sm font-semibold no-underline hover:no-underline"
-          >
-            Transactions
-          </Menu.Item>
+          {menuItems.map((menu) => (
+            <Menu.Item
+              key={menu.id}
+              icon={menu.icon}
+              className={`text-sm font-semibold no-underline hover:no-underline ${
+                menu.style || ""
+              }`}
+            >
+              {menu.label}
+            </Menu.Item>
+          ))}
         </Menu>
-        {/* User Profile Section */}
         <div className="flex items-center p-4 bg-white rounded-lg">
           <Avatar src={profile} size="large" />
           <div className="px-3 ml-3 border-r">
@@ -153,15 +119,7 @@ const Dashboard = () => {
         </Sider>
 
         <Layout style={{ padding: "0 24px 24px" }}>
-          <Content
-            style={{
-              padding: 24,
-              margin: 0,
-              minHeight: 280,
-              background: colorBgContainer,
-              borderRadius: borderRadiusLG,
-            }}
-          >
+          <Content className="p-6 m-0 min-h-[280px] bg-white rounded-lg">
             content here
           </Content>
         </Layout>
