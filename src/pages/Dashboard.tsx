@@ -17,7 +17,7 @@ import { useState } from "react";
 const { Header, Content, Sider } = Layout;
 
 const Dashboard = () => {
-  const [selectedKey, setSelectedKey] = useState(null);
+  const [selectedKey, setSelectedKey] = useState("4");
 
   const colorBgContainer = "#fff";
   const borderRadiusLG = "8px";
@@ -114,11 +114,20 @@ const Dashboard = () => {
             <h2 className="text-2xl font-bold">Patients</h2>
             <SearchOutlined className="text-lg cursor-pointer" />
           </div>
-          <Menu mode="inline" style={{ height: "100%", borderRight: 0 }}>
+          <Menu
+            mode="inline"
+            style={{ height: "100%", borderRight: 0 }}
+            selectedKeys={[selectedKey]}
+          >
             {sideMenuItems.map((item) => (
               <Menu.Item
-                className={`py-8 ${item.key === "4" ? "bg-[#D8FCF7]" : ""}`} // Apply custom background color for item with key '4'
+                className={`py-8 ${item.key === "4" ? "bg-[#D8FCF7]" : ""}`}
                 key={item.key}
+                onClick={() => setSelectedKey(item.key)}
+                style={{
+                  backgroundColor:
+                    selectedKey === item.key ? "#D8FCF7" : "transparent",
+                }}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4">
