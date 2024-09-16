@@ -8,47 +8,22 @@ import {
   CreditCardOutlined,
   SettingOutlined,
   EllipsisOutlined,
+  SearchOutlined,
 } from "@ant-design/icons";
-import { Breadcrumb, Layout, Menu, Avatar, Button } from "antd";
+import { Layout, Menu, Avatar, Button } from "antd";
 import companyLogo from "../assets/companyLogo.png";
 import profile from "../assets/profile.png";
 
 const { Header, Content, Sider } = Layout;
 
 const items2 = [
-  {
-    key: "sub1",
-    icon: <UserOutlined />,
-    label: "subnav 1",
-    children: [
-      { key: "1", label: "option1" },
-      { key: "2", label: "option2" },
-      { key: "3", label: "option3" },
-      { key: "4", label: "option4" },
-    ],
-  },
-  {
-    key: "sub2",
-    icon: <LaptopOutlined />,
-    label: "subnav 2",
-    children: [
-      { key: "5", label: "option5" },
-      { key: "6", label: "option6" },
-      { key: "7", label: "option7" },
-      { key: "8", label: "option8" },
-    ],
-  },
-  {
-    key: "sub3",
-    icon: <NotificationOutlined />,
-    label: "subnav 3",
-    children: [
-      { key: "9", label: "option9" },
-      { key: "10", label: "option10" },
-      { key: "11", label: "option11" },
-      { key: "12", label: "option12" },
-    ],
-  },
+  { key: "1", icon: <UserOutlined />, label: "Option 1" },
+  { key: "2", icon: <LaptopOutlined />, label: "Option 2" },
+  { key: "3", icon: <NotificationOutlined />, label: "Option 3" },
+  { key: "4", icon: <HomeOutlined />, label: "Option 4" },
+  { key: "5", icon: <CalendarOutlined />, label: "Option 5" },
+  { key: "6", icon: <MessageOutlined />, label: "Option 6" },
+  { key: "7", icon: <CreditCardOutlined />, label: "Option 7" },
 ];
 
 const Dashboard = () => {
@@ -58,7 +33,7 @@ const Dashboard = () => {
   return (
     <Layout className="min-h-screen">
       {/* Header */}
-      <Header className="flex items-center justify-between px-4 bg-white shadow-md">
+      <Header className="flex items-center justify-between px-4 bg-white">
         {/* Logo Section */}
         <div className="flex items-center">
           <img src={companyLogo} alt="Tech.Care Logo" className="h-10 mr-3" />
@@ -123,7 +98,9 @@ const Dashboard = () => {
               className="text-gray-600 bg-transparent border-none hover:text-green-600"
             />
             <Button
-              icon={<EllipsisOutlined className="font-bold transform rotate-90" />}
+              icon={
+                <EllipsisOutlined className="font-bold transform rotate-90" />
+              }
               shape="circle"
               className="text-gray-600 bg-transparent border-none hover:text-green-600"
             />
@@ -131,23 +108,25 @@ const Dashboard = () => {
         </div>
       </Header>
 
-      {/* Sidebar and Content Layout */}
-      <Layout>
-        <Sider width={200} style={{ background: colorBgContainer }}>
+      <Layout className="p-6">
+        <Sider width={300} style={{ background: colorBgContainer }} className="py-3">
+          <div className="flex items-center justify-between px-5 mb-4">
+            <h2 className="text-2xl font-bold">Patients</h2>
+            <SearchOutlined className="text-lg cursor-pointer" />
+          </div>
           <Menu
             mode="inline"
             defaultSelectedKeys={["1"]}
-            defaultOpenKeys={["sub1"]}
             style={{ height: "100%", borderRight: 0 }}
-            items={items2}
-          />
+          >
+            {items2.map((item) => (
+              <Menu.Item key={item.key} icon={item.icon}>
+                {item.label}
+              </Menu.Item>
+            ))}
+          </Menu>
         </Sider>
         <Layout style={{ padding: "0 24px 24px" }}>
-          <Breadcrumb style={{ margin: "16px 0" }}>
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
-            <Breadcrumb.Item>List</Breadcrumb.Item>
-            <Breadcrumb.Item>App</Breadcrumb.Item>
-          </Breadcrumb>
           <Content
             style={{
               padding: 24,
