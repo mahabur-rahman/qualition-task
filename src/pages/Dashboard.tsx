@@ -1,4 +1,3 @@
-
 import {
   LaptopOutlined,
   NotificationOutlined,
@@ -53,7 +52,7 @@ const items2 = [
 ];
 
 const Dashboard = () => {
-  const colorBgContainer = "#fff"; 
+  const colorBgContainer = "#fff";
   const borderRadiusLG = "8px";
 
   return (
@@ -68,49 +67,48 @@ const Dashboard = () => {
         {/* Menu Items */}
         <Menu
           mode="horizontal"
-          className="justify-center flex-1 bg-transparent border-none"
+          className="flex justify-center bg-transparent border-none"
         >
           <Menu.Item
             key="1"
             icon={<HomeOutlined />}
-            className="text-sm font-semibold"
+            className="text-sm font-semibold no-underline hover:no-underline"
           >
             Overview
           </Menu.Item>
           <Menu.Item
             key="2"
             icon={<UserOutlined />}
-            className="text-sm font-semibold text-white bg-red-500 rounded-full"
+            className="text-sm font-semibold text-white bg-[#01F0D0] w-[120px] mx-auto text-center rounded-full no-underline hover:no-underline"
           >
             Patients
           </Menu.Item>
           <Menu.Item
             key="3"
             icon={<CalendarOutlined />}
-            className="text-sm font-semibold"
+            className="text-sm font-semibold no-underline hover:no-underline"
           >
             Schedule
           </Menu.Item>
           <Menu.Item
             key="4"
             icon={<MessageOutlined />}
-            className="text-sm font-semibold"
+            className="text-sm font-semibold no-underline hover:no-underline"
           >
             Message
           </Menu.Item>
           <Menu.Item
             key="5"
             icon={<CreditCardOutlined />}
-            className="text-sm font-semibold"
+            className="text-sm font-semibold no-underline hover:no-underline"
           >
             Transactions
           </Menu.Item>
         </Menu>
-
         {/* User Profile Section */}
-        <div className="flex items-center p-4 bg-white rounded-lg shadow-md">
+        <div className="flex items-center p-4 bg-white rounded-lg">
           <Avatar src={profile} size="large" />
-          <div className="ml-3">
+          <div className="px-3 ml-3 border-r">
             <span className="block text-base font-semibold text-gray-900">
               Dr. Jose Simmons
             </span>
@@ -118,14 +116,14 @@ const Dashboard = () => {
               General Practitioner
             </span>
           </div>
-          <div className="flex ml-auto space-x-2">
+          <div className="flex">
             <Button
-              icon={<SettingOutlined />}
+              icon={<SettingOutlined className="font-bold" />}
               shape="circle"
               className="text-gray-600 bg-transparent border-none hover:text-green-600"
             />
             <Button
-              icon={<EllipsisOutlined />}
+              icon={<EllipsisOutlined className="font-bold transform rotate-90" />}
               shape="circle"
               className="text-gray-600 bg-transparent border-none hover:text-green-600"
             />

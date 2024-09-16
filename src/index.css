@@ -24,4 +24,10 @@ a {
   text-decoration: none;
 }
 
+:where(.css-dev-only-do-not-override-1gwfwyx).ant-menu-light.ant-menu-horizontal >.ant-menu-item, :where(.css-dev-only-do-not-override-1gwfwyx).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item, :where(.css-dev-only-do-not-override-1gwfwyx).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu, :where(.css-dev-only-do-not-override-1gwfwyx).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu {
+
+  padding: .6rem;
+  border-radius: 30px;
+  margin: .5rem;
+}
 
