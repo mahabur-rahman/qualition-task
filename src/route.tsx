@@ -1,7 +1,7 @@
 import Error from "./common/Error";
-import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
 
 export const routes = [
-  { path: "/", element: <Home /> },
+  { path: "/", element: <Dashboard /> },
   { path: "/*", element: <Error /> },
 ];
