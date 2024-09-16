@@ -12,10 +12,13 @@ import { Layout, Menu, Avatar, Button } from "antd";
 import companyLogo from "../assets/companyLogo.png";
 import profile from "../assets/profile.png";
 import { sideMenuItems } from "../data/data";
+import { useState } from "react";
 
 const { Header, Content, Sider } = Layout;
 
 const Dashboard = () => {
+  const [selectedKey, setSelectedKey] = useState(null);
+
   const colorBgContainer = "#fff";
   const borderRadiusLG = "8px";
 
@@ -105,19 +108,18 @@ const Dashboard = () => {
             height: "100vh",
             overflowY: "auto",
           }}
-          className="py-3 sider-custom-scrollbar" // Added custom class
+          className="py-3 sider-custom-scrollbar"
         >
           <div className="flex items-center justify-between px-5 mb-4">
             <h2 className="text-2xl font-bold">Patients</h2>
             <SearchOutlined className="text-lg cursor-pointer" />
           </div>
-          <Menu
-            mode="inline"
-            defaultSelectedKeys={["1"]}
-            style={{ height: "100%", borderRight: 0 }}
-          >
+          <Menu mode="inline" style={{ height: "100%", borderRight: 0 }}>
             {sideMenuItems.map((item) => (
-              <Menu.Item className="py-8" key={item.key}>
+              <Menu.Item
+                className={`py-8 ${item.key === "4" ? "bg-[#D8FCF7]" : ""}`} // Apply custom background color for item with key '4'
+                key={item.key}
+              >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4">
                     <img
@@ -126,7 +128,9 @@ const Dashboard = () => {
                       className="w-12 h-12 border rounded-full"
                     />
                     <div>
-                      <h3 className="mb-[-16px] font-semibold text-black">{item.name}</h3>
+                      <h3 className="mb-[-16px] font-semibold text-black">
+                        {item.name}
+                      </h3>
                       <p className="text-gray-600">
                         {item.gender}, <span>{item.age}</span>
                       </p>
