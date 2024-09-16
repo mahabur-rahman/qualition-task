@@ -5,11 +5,12 @@ import {
 } from "@ant-design/icons";
 import { Layout, Menu, Avatar, Button } from "antd";
 import companyLogo from "../assets/companyLogo.png";
-import profile from "../assets/profile.png";
-import { menuItems, sideMenuItems } from "../data/data";
+import { menuItems, sideMenuItems, userProfile } from "../data/data";
 import { useState } from "react";
+import DiagnosticChart from "../components/DiagnosticChart";
+import UserProfile from "../components/UserProfile";
 
-const { Header, Content, Sider } = Layout;
+const { Header, Sider } = Layout;
 
 const Dashboard = () => {
   const [selectedKey, setSelectedKey] = useState("4");
@@ -40,13 +41,13 @@ const Dashboard = () => {
           ))}
         </Menu>
         <div className="flex items-center p-4 bg-white rounded-lg">
-          <Avatar src={profile} size="large" />
+          <Avatar src={userProfile.avatar} size="large" />
           <div className="px-3 ml-3 border-r">
             <span className="block text-base font-semibold text-gray-900">
-              Dr. Jose Simmons
+              {userProfile.name}
             </span>
             <span className="block text-sm text-gray-500">
-              General Practitioner
+              {userProfile.role}
             </span>
           </div>
           <div className="flex">
@@ -68,7 +69,7 @@ const Dashboard = () => {
 
       <Layout className="p-6">
         <Sider
-          width={350}
+          width={300}
           style={{
             background: colorBgContainer,
             height: "100vh",
@@ -118,10 +119,17 @@ const Dashboard = () => {
           </Menu>
         </Sider>
 
-        <Layout style={{ padding: "0 24px 24px" }}>
-          <Content className="p-6 m-0 min-h-[280px] bg-white rounded-lg">
-            content here
-          </Content>
+        <Layout
+          style={{ padding: "0 24px 24px" }}
+          className="grid grid-cols-10 gap-4"
+        >
+          <div className="col-span-7 p-6 m-0 min-h-[280px] bg-white rounded-lg">
+            <DiagnosticChart />
+          </div>
+
+          <div className="col-span-3 p-6 m-0 min-h-[280px] bg-white rounded-lg">
+            <UserProfile />
+          </div>
         </Layout>
       </Layout>
     </Layout>

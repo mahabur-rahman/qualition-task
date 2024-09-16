@@ -10,10 +10,10 @@ import patientNine from '../assets/patient9.png'
 import patientTen from '../assets/patient10.png'
 import patientEleven from '../assets/patient11.png'
 import patientTwelve from '../assets/patient12.png'
+import profile from "../assets/profile.png";
 
 import { CalendarOutlined, CreditCardOutlined, EllipsisOutlined, HomeOutlined, MessageOutlined, UserOutlined } from "@ant-design/icons";
 
-// data.js
 export const menuItems = [
   { id: '1', icon: <HomeOutlined />, label: 'Overview' },
   { id: '2', icon: <UserOutlined />, label: 'Patients', style: 'text-white bg-[#01F0D0] w-[110px]' },
@@ -22,6 +22,11 @@ export const menuItems = [
   { id: '5', icon: <CreditCardOutlined />, label: 'Transactions' },
 ];
 
+export const userProfile = {
+  name: 'Dr. Jose Simmons',
+  role: 'General Practitioner',
+  avatar: profile, 
+};
 
 
 export const sideMenuItems = [
