@@ -31,3 +31,40 @@ a {
   margin: .5rem;
 }
 
+/* Custom Vertical Scrollbar */
+.sider-custom-scrollbar::-webkit-scrollbar {
+  width: 7px; /* Width of the vertical scrollbar */
+}
+
+.sider-custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track background color */
+  border-radius: 10px; /* Track border radius */
+}
+
+.sider-custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888; /* Scrollbar color */
+  border-radius: 10px; /* Scrollbar border radius */
+}
+
+.sider-custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Scrollbar color on hover */
+}
+
+/* Custom Horizontal Scrollbar */
+.horizontal-scrollbar::-webkit-scrollbar {
+  height: 7px; /* Height of the horizontal scrollbar */
+}
+
+.horizontal-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track background color */
+  border-radius: 10px; /* Track border radius */
+}
+
+.horizontal-scrollbar::-webkit-scrollbar-thumb {
+  background: #888; /* Scrollbar color */
+  border-radius: 10px; /* Scrollbar border radius */
+}
+
+.horizontal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Scrollbar color on hover */
+}

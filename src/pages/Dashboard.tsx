@@ -9,6 +9,7 @@ import {
   SettingOutlined,
   EllipsisOutlined,
   SearchOutlined,
+  ArrowRightOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, Avatar, Button } from "antd";
 import companyLogo from "../assets/companyLogo.png";
@@ -17,13 +18,78 @@ import profile from "../assets/profile.png";
 const { Header, Content, Sider } = Layout;
 
 const items2 = [
-  { key: "1", icon: <UserOutlined />, label: "Option 1" },
-  { key: "2", icon: <LaptopOutlined />, label: "Option 2" },
-  { key: "3", icon: <NotificationOutlined />, label: "Option 3" },
-  { key: "4", icon: <HomeOutlined />, label: "Option 4" },
-  { key: "5", icon: <CalendarOutlined />, label: "Option 5" },
-  { key: "6", icon: <MessageOutlined />, label: "Option 6" },
-  { key: "7", icon: <CreditCardOutlined />, label: "Option 7" },
+  {
+    key: "1",
+    icon: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    label: "Option 1",
+    rightIcon: <EllipsisOutlined />,
+  },
+  {
+    key: "2",
+    icon: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    label: "Option 2",
+    rightIcon: <EllipsisOutlined />,
+  },
+  {
+    key: "3",
+    icon: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    label: "Option 3",
+    rightIcon: <EllipsisOutlined />,
+  },
+  {
+    key: "4",
+    icon: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    label: "Option 4",
+    rightIcon: <EllipsisOutlined />,
+  },
+  {
+    key: "1",
+    icon: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    label: "Option 1",
+    rightIcon: <EllipsisOutlined />,
+  },
+  {
+    key: "2",
+    icon: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    label: "Option 2",
+    rightIcon: <EllipsisOutlined />,
+  },
+  {
+    key: "3",
+    icon: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    label: "Option 3",
+    rightIcon: <EllipsisOutlined />,
+  },
+  {
+    key: "4",
+    icon: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    label: "Option 4",
+    rightIcon: <EllipsisOutlined />,
+  },
+  {
+    key: "1",
+    icon: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    label: "Option 1",
+    rightIcon: <EllipsisOutlined />,
+  },
+  {
+    key: "2",
+    icon: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    label: "Option 2",
+    rightIcon: <EllipsisOutlined />,
+  },
+  {
+    key: "3",
+    icon: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    label: "Option 3",
+    rightIcon: <EllipsisOutlined />,
+  },
+  {
+    key: "4",
+    icon: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    label: "Option 4",
+    rightIcon: <EllipsisOutlined />,
+  },
 ];
 
 const Dashboard = () => {
@@ -109,7 +175,15 @@ const Dashboard = () => {
       </Header>
 
       <Layout className="p-6">
-        <Sider width={300} style={{ background: colorBgContainer }} className="py-3">
+        <Sider
+          width={300}
+          style={{
+            background: colorBgContainer,
+            height: "100vh",
+            overflowY: "auto",
+          }}
+          className="py-3 sider-custom-scrollbar" // Added custom class
+        >
           <div className="flex items-center justify-between px-5 mb-4">
             <h2 className="text-2xl font-bold">Patients</h2>
             <SearchOutlined className="text-lg cursor-pointer" />
@@ -120,12 +194,19 @@ const Dashboard = () => {
             style={{ height: "100%", borderRight: 0 }}
           >
             {items2.map((item) => (
-              <Menu.Item key={item.key} icon={item.icon}>
-                {item.label}
+              <Menu.Item
+                key={item.key}
+                icon={<img src={item.icon} alt="" className="w-6 h-6" />}
+              >
+                <div className="flex items-center justify-between">
+                  {item.label}
+                  {item.rightIcon}
+                </div>
               </Menu.Item>
             ))}
           </Menu>
         </Sider>
+
         <Layout style={{ padding: "0 24px 24px" }}>
           <Content
             style={{
