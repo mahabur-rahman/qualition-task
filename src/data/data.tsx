@@ -1,9 +1,22 @@
+import patientOne from '../assets/patient1.png'
+import patientTwo from '../assets/patient2.png'
+import patientThree from '../assets/patient3.png'
+import patientFour from '../assets/patient4.png'
+import patientFive from '../assets/patient5.png'
+import patientSix from '../assets/patient6.png'
+import patientSeven from '../assets/patient7.png'
+import patientEight from '../assets/patient8.png'
+import patientNine from '../assets/patient9.png'
+import patientTen from '../assets/patient10.png'
+import patientEleven from '../assets/patient11.png'
+import patientTwelve from '../assets/patient12.png'
+
 import { EllipsisOutlined } from "@ant-design/icons";
 
 export const sideMenuItems = [
   {
     key: "1",
-    icon: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    icon: patientOne,
     name: "Emily Williams",
     gender: "Female",
     age: "18",
@@ -11,7 +24,7 @@ export const sideMenuItems = [
   },
   {
     key: "2",
-    icon: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    icon: patientTwo,
     name: "Ryan Johnson",
     gender: "Male",
     age: "45",
@@ -19,7 +32,7 @@ export const sideMenuItems = [
   },
   {
     key: "3",
-    icon: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    icon: patientThree,
     name: "Brandon Mitchell",
     gender: "Male",
     age: "36",
@@ -27,7 +40,7 @@ export const sideMenuItems = [
   },
   {
     key: "4",
-    icon: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    icon: patientFour,
     name: "Jessica Taylor",
     gender: "Female",
     age: "28",
@@ -35,7 +48,7 @@ export const sideMenuItems = [
   },
   {
     key: "5",
-    icon: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    icon: patientFive,
     name: "Emily Williams",
     gender: "Female",
     age: "18",
@@ -43,7 +56,7 @@ export const sideMenuItems = [
   },
   {
     key: "6",
-    icon: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    icon: patientSix,
     name: "Samantha Johnson",
     gender: "Female",
     age: "56",
@@ -51,7 +64,7 @@ export const sideMenuItems = [
   },
   {
     key: "7",
-    icon: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    icon: patientSeven,
     name: "Ashley Martinez",
     gender: "Female",
     age: "54",
@@ -59,7 +72,7 @@ export const sideMenuItems = [
   },
   {
     key: "8",
-    icon: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    icon: patientEight,
     name: "Olivia Brown",
     gender: "Female",
     age: "32",
@@ -67,7 +80,7 @@ export const sideMenuItems = [
   },
   {
     key: "9",
-    icon: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    icon: patientNine,
     name: "Tyler Davis",
     gender: "Male",
     age: "19",
@@ -75,7 +88,7 @@ export const sideMenuItems = [
   },
   {
     key: "10",
-    icon: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    icon: patientTen,
     name: "Kevin Anderson",
     gender: "Male",
     age: "30",
@@ -83,7 +96,7 @@ export const sideMenuItems = [
   },
   {
     key: "11",
-    icon: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    icon: patientEleven,
     name: "Dylan Thompson",
     gender: "Male",
     age: "36",
@@ -91,7 +104,7 @@ export const sideMenuItems = [
   },
   {
     key: "12",
-    icon: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    icon: patientTwelve,
     name: "Nathan Evans",
     gender: "Male",
     age: "58",

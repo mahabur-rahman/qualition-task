@@ -99,7 +99,7 @@ const Dashboard = () => {
 
       <Layout className="p-6">
         <Sider
-          width={300}
+          width={350}
           style={{
             background: colorBgContainer,
             height: "100vh",
@@ -117,29 +117,24 @@ const Dashboard = () => {
             style={{ height: "100%", borderRight: 0 }}
           >
             {sideMenuItems.map((item) => (
-             <Menu.Item
-             className="py-8"
-             key={item.key}
-           >
-             <div className="flex items-center justify-between">
-             <img
-                   src={item.icon}
-                   alt="menu item"
-                   className="w-12 h-12 border rounded-full"
-                 />
-               <div>
-                 <h3 className="font-semibold">{item.name}</h3>
-                 <p>
-                   {item.gender}, <span>{item.age}</span>
-                 </p>
-               </div>
-               <div className="flex items-center">
-                 <div className="mr-4">{item.rightIcon}</div>
-               
-               </div>
-             </div>
-           </Menu.Item>
-           
+              <Menu.Item className="py-8" key={item.key}>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-4">
+                    <img
+                      src={item.icon}
+                      alt="menu item"
+                      className="w-12 h-12 border rounded-full"
+                    />
+                    <div>
+                      <h3 className="mb-[-16px] font-semibold text-black">{item.name}</h3>
+                      <p className="text-gray-600">
+                        {item.gender}, <span>{item.age}</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div>{item.rightIcon}</div>
+                </div>
+              </Menu.Item>
             ))}
           </Menu>
         </Sider>
