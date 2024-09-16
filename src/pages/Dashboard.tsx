@@ -1,6 +1,4 @@
 import {
-  LaptopOutlined,
-  NotificationOutlined,
   UserOutlined,
   HomeOutlined,
   CalendarOutlined,
@@ -9,88 +7,13 @@ import {
   SettingOutlined,
   EllipsisOutlined,
   SearchOutlined,
-  ArrowRightOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, Avatar, Button } from "antd";
 import companyLogo from "../assets/companyLogo.png";
 import profile from "../assets/profile.png";
+import { sideMenuItems } from "../data/data";
 
 const { Header, Content, Sider } = Layout;
-
-const items2 = [
-  {
-    key: "1",
-    icon: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    label: "Option 1",
-    rightIcon: <EllipsisOutlined />,
-  },
-  {
-    key: "2",
-    icon: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    label: "Option 2",
-    rightIcon: <EllipsisOutlined />,
-  },
-  {
-    key: "3",
-    icon: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    label: "Option 3",
-    rightIcon: <EllipsisOutlined />,
-  },
-  {
-    key: "4",
-    icon: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    label: "Option 4",
-    rightIcon: <EllipsisOutlined />,
-  },
-  {
-    key: "1",
-    icon: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    label: "Option 1",
-    rightIcon: <EllipsisOutlined />,
-  },
-  {
-    key: "2",
-    icon: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    label: "Option 2",
-    rightIcon: <EllipsisOutlined />,
-  },
-  {
-    key: "3",
-    icon: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    label: "Option 3",
-    rightIcon: <EllipsisOutlined />,
-  },
-  {
-    key: "4",
-    icon: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    label: "Option 4",
-    rightIcon: <EllipsisOutlined />,
-  },
-  {
-    key: "1",
-    icon: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    label: "Option 1",
-    rightIcon: <EllipsisOutlined />,
-  },
-  {
-    key: "2",
-    icon: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    label: "Option 2",
-    rightIcon: <EllipsisOutlined />,
-  },
-  {
-    key: "3",
-    icon: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    label: "Option 3",
-    rightIcon: <EllipsisOutlined />,
-  },
-  {
-    key: "4",
-    icon: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    label: "Option 4",
-    rightIcon: <EllipsisOutlined />,
-  },
-];
 
 const Dashboard = () => {
   const colorBgContainer = "#fff";
@@ -193,16 +116,30 @@ const Dashboard = () => {
             defaultSelectedKeys={["1"]}
             style={{ height: "100%", borderRight: 0 }}
           >
-            {items2.map((item) => (
-              <Menu.Item
-                key={item.key}
-                icon={<img src={item.icon} alt="" className="w-6 h-6" />}
-              >
-                <div className="flex items-center justify-between">
-                  {item.label}
-                  {item.rightIcon}
-                </div>
-              </Menu.Item>
+            {sideMenuItems.map((item) => (
+             <Menu.Item
+             className="py-8"
+             key={item.key}
+           >
+             <div className="flex items-center justify-between">
+             <img
+                   src={item.icon}
+                   alt="menu item"
+                   className="w-12 h-12 border rounded-full"
+                 />
+               <div>
+                 <h3 className="font-semibold">{item.name}</h3>
+                 <p>
+                   {item.gender}, <span>{item.age}</span>
+                 </p>
+               </div>
+               <div className="flex items-center">
+                 <div className="mr-4">{item.rightIcon}</div>
+               
+               </div>
+             </div>
+           </Menu.Item>
+           
             ))}
           </Menu>
         </Sider>
