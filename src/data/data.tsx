@@ -19,11 +19,11 @@ import { CalendarOutlined, CreditCardOutlined, EllipsisOutlined, HomeOutlined, M
 import { DataType } from '../interfaces/dashboard.interface'
 
 export const menuItems = [
-  { id: '1', icon: <HomeOutlined />, label: 'Overview' },
-  { id: '2', icon: <UserOutlined />, label: 'Patients', style: 'text-white bg-[#01F0D0] w-[110px]' },
-  { id: '3', icon: <CalendarOutlined />, label: 'Schedule' },
-  { id: '4', icon: <MessageOutlined />, label: 'Message' },
-  { id: '5', icon: <CreditCardOutlined />, label: 'Transactions' },
+  { id: 1, icon: <HomeOutlined />, label: 'Overview' },
+  { id: 2, icon: <UserOutlined />, label: 'Patients', style: 'text-white bg-[#01F0D0] w-[110px]' },
+  { id: 3, icon: <CalendarOutlined />, label: 'Schedule' },
+  { id: 4, icon: <MessageOutlined />, label: 'Message' },
+  { id: 5, icon: <CreditCardOutlined />, label: 'Transactions' },
 ];
 
 export const userProfile = {
@@ -243,4 +243,13 @@ export const data: DataType[] = [
     description: "Difficulty falling or staying asleep",
     address: "Recurring",
   },
+];
+
+
+export const labResults = [
+  { id: 1, test: "Blood Test", result: "Normal", date: "2024-09-01" },
+  { id: 2, test: "X-Ray", result: "Normal", date: "2024-09-05" },
+  { id: 3, test: "MRI", result: "Abnormal", date: "2024-09-10" },
+  { id: 4, test: "CT Scan", result: "Normal", date: "2024-09-12" },
+  { id: 5, test: "Ultrasound", result: "Normal", date: "2024-09-15" },
 ];

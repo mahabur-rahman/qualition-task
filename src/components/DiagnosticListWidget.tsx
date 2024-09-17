@@ -29,7 +29,7 @@ const DiagnosticListWidget = () => (
       <Table
         columns={columns}
         dataSource={data}
-        pagination={false} // Disable pagination for scrolling
+        pagination={false}
         className="w-full table-auto"
       />
     </div>

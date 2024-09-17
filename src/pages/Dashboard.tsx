@@ -11,6 +11,7 @@ import DiagnosticChart from "../components/DiagnosticChart";
 import UserProfile from "../components/UserProfile";
 import DiagnosticReport from "../components/DiagnosticReport";
 import DiagnosticListWidget from "../components/DiagnosticListWidget";
+import LabResult from "../components/LabResult";
 
 const { Header, Sider } = Layout;
 
@@ -134,6 +135,7 @@ const Dashboard = () => {
 
             <div className="col-span-3 p-6 m-0 min-h-[280px] bg-white rounded-lg">
               <UserProfile />
+              <LabResult />
             </div>
           </Layout>
         </Layout>
