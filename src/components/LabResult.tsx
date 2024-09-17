@@ -17,7 +17,7 @@ const LabResult = () => {
             <div className="flex-1">
               <div className="text-[13px]">{label}</div>
             </div>
-            <FaDownload className="ml-4 text-lg text-gray-600 cursor-pointer" />
+            <FaDownload className="ml-4 text-gray-600 cursor-pointer text-md" />
           </div>
         ))}
       </section>

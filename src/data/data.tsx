@@ -1,37 +1,48 @@
-import patientOne from '../assets/patient1.png'
-import patientTwo from '../assets/patient2.png'
-import patientThree from '../assets/patient3.png'
-import patientFour from '../assets/patient4.png'
-import patientFive from '../assets/patient5.png'
-import patientSix from '../assets/patient6.png'
-import patientSeven from '../assets/patient7.png'
-import patientEight from '../assets/patient8.png'
-import patientNine from '../assets/patient9.png'
-import patientTen from '../assets/patient10.png'
-import patientEleven from '../assets/patient11.png'
-import patientTwelve from '../assets/patient12.png'
+import patientOne from "../assets/patient1.png";
+import patientTwo from "../assets/patient2.png";
+import patientThree from "../assets/patient3.png";
+import patientFour from "../assets/patient4.png";
+import patientFive from "../assets/patient5.png";
+import patientSix from "../assets/patient6.png";
+import patientSeven from "../assets/patient7.png";
+import patientEight from "../assets/patient8.png";
+import patientNine from "../assets/patient9.png";
+import patientTen from "../assets/patient10.png";
+import patientEleven from "../assets/patient11.png";
+import patientTwelve from "../assets/patient12.png";
 import profile from "../assets/profile.png";
-import heart from '../assets/heart.png';
-import temperature from '../assets/temperature.png';
-import heartBP from '../assets/HeartBP.png';
-
-import { CalendarOutlined, CreditCardOutlined, EllipsisOutlined, HomeOutlined, MessageOutlined, UserOutlined } from "@ant-design/icons";
-import { DataType } from '../interfaces/dashboard.interface'
+import heart from "../assets/heart.png";
+import temperature from "../assets/temperature.png";
+import heartBP from "../assets/HeartBP.png";
+import {
+  CalendarOutlined,
+  CreditCardOutlined,
+  EllipsisOutlined,
+  HomeOutlined,
+  MessageOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
+import { DataType } from "../interfaces/dashboard.interface";
 
 export const menuItems = [
-  { id: 1, icon: <HomeOutlined />, label: 'Overview' },
-  { id: 2, icon: <UserOutlined />, label: 'Patients', style: 'text-black bg-[#01F0D0] w-[110px] rounded-full p-2 items-center flex' },
-  { id: 3, icon: <CalendarOutlined />, label: 'Schedule' },
-  { id: 4, icon: <MessageOutlined />, label: 'Message' },
-  { id: 5, icon: <CreditCardOutlined />, label: 'Transactions' },
+  { id: 1, icon: <HomeOutlined />, label: "Overview" },
+  {
+    id: 2,
+    icon: <UserOutlined />,
+    label: "Patients",
+    style:
+      "text-black bg-[#01F0D0] w-[110px] rounded-full p-2 items-center flex",
+  },
+  { id: 3, icon: <CalendarOutlined />, label: "Schedule" },
+  { id: 4, icon: <MessageOutlined />, label: "Message" },
+  { id: 5, icon: <CreditCardOutlined />, label: "Transactions" },
 ];
 
 export const userProfile = {
-  name: 'Dr. Jose Simmons',
-  role: 'General Practitioner',
-  avatar: profile, 
+  name: "Dr. Jose Simmons",
+  role: "General Practitioner",
+  avatar: profile,
 };
-
 
 export const sideMenuItems = [
   {
@@ -142,31 +153,30 @@ export const userInfo = {
   profileImage: patientFour,
 };
 
-
- export const labReports = [
+export const labReports = [
   {
     id: 1,
     image: heart,
-    title: 'Respiratory Rate',
-    value: '20 bpm',
-    status: 'Normal',
-    bgColor: '#E0F3FA', 
+    title: "Respiratory Rate",
+    value: "20 bpm",
+    status: "Normal",
+    bgColor: "#E0F3FA",
   },
   {
     id: 2,
     image: temperature,
-    title: 'Temperature',
-    value: '98.6°F',
-    status: 'Normal',
-    bgColor: '#FFE6E9',
+    title: "Temperature",
+    value: "98.6°F",
+    status: "Normal",
+    bgColor: "#FFE6E9",
   },
   {
     id: 3,
     image: heartBP,
-    title: 'Heart Rate',
-    value: '78 bpm',
-    status: 'Lower than Average',
-    bgColor: '#FFE6F1',
+    title: "Heart Rate",
+    value: "78 bpm",
+    status: "Lower than Average",
+    bgColor: "#FFE6F1",
   },
 ];
 
@@ -245,14 +255,13 @@ export const data: DataType[] = [
   },
 ];
 
-
 export const labResults = [
-  { id: 1, label: "Blood Test", },
-  { id: 2, label: "CT Scans",},
-  { id: 3, label: "Radiology Reports",  },
-  { id: 4, label: "X-Rays", },
-  { id: 5, label: "Urine Test", },
-  { id: 6, label: 'Ultrasound'},
+  { id: 1, label: "Blood Test" },
+  { id: 2, label: "CT Scans" },
+  { id: 3, label: "Radiology Reports" },
+  { id: 4, label: "X-Rays" },
+  { id: 5, label: "Urine Test" },
+  { id: 6, label: "Ultrasound" },
   { id: 7, label: "MRI Scan" },
   { id: 8, label: "Liver Function Test" },
   { id: 9, label: "Kidney Function Test" },

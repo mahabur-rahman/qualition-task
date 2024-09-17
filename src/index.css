@@ -40,11 +40,7 @@ a {
   border-radius: 10px;
 }
 
-.sider-custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background-color: #072635;
-}
-
-/* Customize scrollbar styles for Diagnostic List */
+/* scrollbar for Diagnostic List */
 .scrollbar-custom::-webkit-scrollbar {
   height: 0.5rem;
   width: 6px;
@@ -61,8 +57,4 @@ a {
   -moz-border-radius: 9999px;
   -ms-border-radius: 9999px;
   -o-border-radius: 9999px;
-}
-
-.scrollbar-custom::-webkit-scrollbar-thumb:hover {
-  background: #555;
 }
