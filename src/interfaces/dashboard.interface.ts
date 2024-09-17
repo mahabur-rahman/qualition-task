@@ -64,10 +64,11 @@ export interface DiagnosisHistoryEntry {
   month: string;
   year: string;
   blood_pressure: BloodPressure;
-  heart_rate?: { value: number; levels?: string };
-  respiratory_rate?: { value: number; levels?: string };
-  temperature?: { value: number; levels?: string };
+  heart_rate: { value: number; levels: string };  
+  respiratory_rate: { value: number; levels: string };  
+  temperature: { value: number; levels: string }; 
 }
+
 
 export interface UserInfo {
   diagnosis_history: DiagnosisHistoryEntry[];
