@@ -68,10 +68,6 @@ a {
   background: #555;
 }
 
-/* :where(.css-dev-only-do-not-override-1gwfwyx).ant-table-wrapper .ant-table-pagination.ant-pagination {
-  display: none;
-} */
-
 
 /* Customize scrollbar styles for Diagnostic List */
 .scrollbar-custom {
