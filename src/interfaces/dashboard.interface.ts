@@ -80,3 +80,18 @@ export interface DiagnosticChartProps {
 export interface DiagnosticReportProps {
   userInfo: UserInfo[];
 }
+
+export interface DiagnosisItem {
+  heart_rate: {
+    value: number;
+    levels: string;
+  };
+  respiratory_rate: {
+    value: number;
+    levels: string;
+  };
+  temperature: {
+    value: number;
+    levels: string;
+  };
+}

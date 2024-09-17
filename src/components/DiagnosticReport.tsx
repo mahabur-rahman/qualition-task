@@ -1,24 +1,8 @@
-import React from 'react';
 import { FaCaretDown } from "react-icons/fa";
-import heart from '../assets/heart.png';
-import temp from '../assets/temperature.png';
-import heartBP from '../assets/HeartBP.png';
-
-// Define the types for the data used in the component
-interface DiagnosisItem {
-  heart_rate: {
-    value: number;
-    levels: string;
-  };
-  respiratory_rate: {
-    value: number;
-    levels: string;
-  };
-  temperature: {
-    value: number;
-    levels: string;
-  };
-}
+import heart from "../assets/heart.png";
+import temp from "../assets/temperature.png";
+import heartBP from "../assets/HeartBP.png";
+import { DiagnosisItem } from "../interfaces/dashboard.interface";
 
 interface UserInfo {
   [index: number]: {
@@ -26,12 +10,11 @@ interface UserInfo {
   };
 }
 
-// Define the props type for the component
 interface DiagnosticReportProps {
   userInfo: UserInfo;
 }
 
-const DiagnosticReport: React.FC<DiagnosticReportProps> = ({ userInfo }) => {
+const DiagnosticReport = ({ userInfo }: DiagnosticReportProps) => {
   const diagnosisHistory = userInfo[3]?.diagnosis_history || [];
   const firstItem = diagnosisHistory[0] || {};
 
@@ -54,7 +37,7 @@ const DiagnosticReport: React.FC<DiagnosticReportProps> = ({ userInfo }) => {
       value: `${temperature.value}°F`,
       status: temperature.levels,
       bgColor: "#FFE6E9",
-      image: temp
+      image: temp,
     },
     {
       id: 3,
@@ -62,7 +45,7 @@ const DiagnosticReport: React.FC<DiagnosticReportProps> = ({ userInfo }) => {
       value: `${heartRate.value} bpm`,
       status: heartRate.levels,
       bgColor: "#FFE6F1",
-      image: heartBP
+      image: heartBP,
     },
   ];
 
@@ -90,7 +73,9 @@ const DiagnosticReport: React.FC<DiagnosticReportProps> = ({ userInfo }) => {
                   </span>
                 )}
                 <p
-                  className={`font-medium ${card.id === 3 ? "text-[#072635]" : ""}`}
+                  className={`font-medium ${
+                    card.id === 3 ? "text-[#072635]" : ""
+                  }`}
                 >
                   {card.status}
                 </p>
