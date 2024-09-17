@@ -16,6 +16,7 @@ import temperature from '../assets/temperature.png';
 import heartBP from '../assets/HeartBP.png';
 
 import { CalendarOutlined, CreditCardOutlined, EllipsisOutlined, HomeOutlined, MessageOutlined, UserOutlined } from "@ant-design/icons";
+import { DataType } from '../interfaces/dashboard.interface'
 
 export const menuItems = [
   { id: '1', icon: <HomeOutlined />, label: 'Overview' },
@@ -166,5 +167,80 @@ export const userInfo = {
     value: '78 bpm',
     status: 'Lower than Average',
     bgColor: '#FFE6F1',
+  },
+];
+
+export const data: DataType[] = [
+  {
+    key: 1,
+    name: "Hypertension",
+    description: "Chronic high blood pressure",
+    address: "Under Treatment",
+  },
+  {
+    key: 2,
+    name: "Type 2 Diabetes",
+    description: "Insulin resistance and elevated blood sugar",
+    address: "Stable",
+  },
+  {
+    key: 3,
+    name: "Asthma",
+    description: "Recurrent episodes of bronchial constriction",
+    address: "Controlled",
+  },
+  {
+    key: 4,
+    name: "Migraine",
+    description: "Severe headache with sensitivity to light and sound",
+    address: "Frequent",
+  },
+  {
+    key: 5,
+    name: "Arthritis",
+    description: "Inflammation of joints causing pain and stiffness",
+    address: "Chronic",
+  },
+  {
+    key: 6,
+    name: "Anemia",
+    description: "Lack of healthy red blood cells",
+    address: "Moderate",
+  },
+  {
+    key: 7,
+    name: "Heart Disease",
+    description: "Narrowing or blockage of coronary arteries",
+    address: "Critical",
+  },
+  {
+    key: 8,
+    name: "Obesity",
+    description: "Excessive body fat accumulation",
+    address: "Severe",
+  },
+  {
+    key: 9,
+    name: "Chronic Bronchitis",
+    description: "Long-term inflammation of the bronchial tubes",
+    address: "Persistent",
+  },
+  {
+    key: 10,
+    name: "Allergy",
+    description: "Hypersensitive immune response to allergens",
+    address: "Seasonal",
+  },
+  {
+    key: 11,
+    name: "Depression",
+    description: "Persistent feelings of sadness and loss of interest",
+    address: "Ongoing",
+  },
+  {
+    key: 12,
+    name: "Insomnia",
+    description: "Difficulty falling or staying asleep",
+    address: "Recurring",
   },
 ];

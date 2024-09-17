@@ -71,3 +71,23 @@ a {
 :where(.css-dev-only-do-not-override-1gwfwyx).ant-table-wrapper .ant-table-pagination.ant-pagination {
   display: none;
 }
+
+
+/* Customize scrollbar styles for Diagnostic List */
+.scrollbar-custom {
+  scrollbar-width: thin;
+  scrollbar-color: #0f2530 #edf2f7;
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 4px; /* Adjust the scrollbar width */
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #edf2f7; /* Light background for the track */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: #072635; /* Darker scrollbar thumb */
+  border-radius: 9999px; /* Fully rounded scrollbar thumb */
+}
