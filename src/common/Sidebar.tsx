@@ -20,7 +20,7 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Sidebar for screens >= 768px */}
+      {/* Sidebar for screens >= 992px */}
       <Sider
         width={300}
         style={{
@@ -32,7 +32,7 @@ const Sidebar = () => {
           overflowY: "auto",
           zIndex: 1,
         }}
-        className="hidden py-3 overflow-hidden md:block sider-custom-scrollbar"
+        className="hidden py-3 overflow-hidden lg:block sider-custom-scrollbar"
       >
         <div className="flex items-center justify-between px-5 mb-4">
           <h2 className="text-2xl font-bold">Patients</h2>
@@ -77,7 +77,7 @@ const Sidebar = () => {
       </Sider>
 
       {/* Hamburger button for mobile screens */}
-      <div className="fixed z-20 md:hidden top-4 left-4">
+      <div className="fixed z-20 lg:hidden top-4 left-4">
         <Button
           icon={<MenuOutlined />}
           onClick={showDrawer}
