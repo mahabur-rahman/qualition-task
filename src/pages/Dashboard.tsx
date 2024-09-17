@@ -76,12 +76,12 @@ const Dashboard = () => {
             width={300}
             style={{
               background: colorBgContainer,
-              height: "calc(100vh - 64px)", 
+              height: "calc(100vh - 64px)",
               position: "fixed",
               top: 64,
               left: 0,
               overflowY: "auto",
-              zIndex: 1, 
+              zIndex: 1,
             }}
             className="py-3 sider-custom-scrollbar"
           >
@@ -131,9 +131,12 @@ const Dashboard = () => {
             style={{ marginLeft: 300, padding: "0 24px 24px" }}
             className="grid grid-cols-10 gap-4"
           >
-            <div className="col-span-7 p-6 m-0 min-h-[280px] bg-white rounded-lg">
-              <DiagnosticChart />
-              <DiagnosticReport />
+            <div className="col-span-7 min-h-[280px] bg-white rounded-lg">
+              <div className="bg-red-400 ">
+                <DiagnosticChart />
+                <DiagnosticReport />
+              </div>
+
               <DiagnosticListWidget />
             </div>
 

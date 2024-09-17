@@ -32,7 +32,6 @@ const DiagnosticChart = () => {
     }
 
     if (ctx) {
-      // Create a new chart instance
       chartInstanceRef.current = new Chart(ctx, {
         type: "line",
         data: {
@@ -48,19 +47,19 @@ const DiagnosticChart = () => {
             {
               label: "Systolic",
               data: [120, 140, 110, 135, 145, 160],
-              borderColor: "#E66FD2", // Updated color
-              backgroundColor: "rgba(230, 111, 210, 0.2)", // Updated color with opacity
+              borderColor: "#E66FD2", 
+              backgroundColor: "rgba(230, 111, 210, 0.2)", 
               fill: true,
-              pointBackgroundColor: "#E66FD2", // Updated color
+              pointBackgroundColor: "#E66FD2", 
               tension: 0.4,
             },
             {
               label: "Diastolic",
               data: [80, 85, 75, 70, 76, 78],
-              borderColor: "#8C6FE6", // Updated color
-              backgroundColor: "rgba(140, 111, 230, 0.2)", // Updated color with opacity
+              borderColor: "#8C6FE6", 
+              backgroundColor: "rgba(140, 111, 230, 0.2)",
               fill: true,
-              pointBackgroundColor: "#8C6FE6", // Updated color
+              pointBackgroundColor: "#8C6FE6", 
               tension: 0.4,
             },
           ],
