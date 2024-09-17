@@ -5,7 +5,7 @@ import WidgetTitle from "./WidgetTitle";
 const LabResult = () => {
   return (
     <>
-      <section className="px-5 pt-6 mt-5 bg-white rounded-lg shadow-sm overflow-y-auto max-h-[500px] scrollbar-custom">
+      <section className="px-5 pt-6 mt-5 bg-white rounded-lg shadow-sm overflow-y-auto max-h-[500px] scrollbar-custom overflow-hidden">
         <div>
           <WidgetTitle label={"Lab Results"} />
         </div>

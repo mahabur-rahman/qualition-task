@@ -23,7 +23,7 @@ const columns: TableColumnsType<DataType> = [
 ];
 
 const DiagnosticListWidget = () => (
-  <div className="px-5 py-8 mt-5 bg-white rounded-xl">
+  <div className="px-5 py-8 mt-5 overflow-hidden bg-white rounded-xl">
     <WidgetTitle label={"Diagnostic List"} />
     <div className="overflow-y-auto scrollbar-custom" style={{ maxHeight: "240px" }}>
       <Table

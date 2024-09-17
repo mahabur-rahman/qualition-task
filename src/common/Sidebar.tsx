@@ -32,7 +32,7 @@ const Sidebar = () => {
           overflowY: "auto",
           zIndex: 1,
         }}
-        className="hidden py-3 md:block sider-custom-scrollbar"
+        className="hidden py-3 overflow-hidden md:block sider-custom-scrollbar"
       >
         <div className="flex items-center justify-between px-5 mb-4">
           <h2 className="text-2xl font-bold">Patients</h2>

@@ -9,31 +9,26 @@ import Sidebar from "../common/Sidebar";
 
 const Dashboard = () => {
   return (
-    <>
-      <Layout className="min-h-screen">
-        <Header />
-        <Layout style={{ paddingTop: 64 }} className="min-h-screen">
-          <Sidebar />
-          <Layout
-            style={{ marginLeft: 300, padding: "25px 24px 24px" }}
-            className="grid grid-cols-10 gap-4"
-          >
-            <div className="col-span-7 rounded-lg">
-              <div className="p-5 bg-white shadow-sm rounded-xl">
-                <DiagnosticChart />
-                <DiagnosticReport />
-              </div>
-              <DiagnosticListWidget />
+    <Layout className="min-h-screen overflow-hidden">
+      <Header />
+      <Layout className="min-h-screen pt-16">
+        <Sidebar />
+        <Layout className="flex flex-col lg:flex-row" style={{ padding: "0" }}>
+          <div className="flex-1 p-4 lg:pl-80 lg:pr-4">
+            <div className="p-5 mb-4 bg-white shadow-sm rounded-xl">
+              <DiagnosticChart />
+              <DiagnosticReport />
             </div>
+            <DiagnosticListWidget />
+          </div>
 
-            <div className="col-span-3 bg-[#F6F7F8] rounded-lg">
-              <UserProfile />
-              <LabResult />
-            </div>
-          </Layout>
+          <div className="lg:block lg:w-80 lg:bg-[#F6F7F8] lg:rounded-lg lg:p-4">
+            <UserProfile />
+            <LabResult />
+          </div>
         </Layout>
       </Layout>
-    </>
+    </Layout>
   );
 };
 
