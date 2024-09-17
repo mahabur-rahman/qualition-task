@@ -107,7 +107,7 @@ const DiagnosticChart = () => {
 
   return (
     <>
-      <section className="max-w-4xl p-6 mx-auto bg-[#F4F0FE] rounded-lg shadow-lg">
+      <section className="w-full p-6 mx-auto bg-[#F4F0FE] rounded-lg shadow-lg">
         <WidgetTitle label={"Lab Results"} />
         <div className="flex justify-between">
           <div className="flex-1">

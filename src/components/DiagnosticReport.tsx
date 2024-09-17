@@ -4,7 +4,7 @@ import { FaCaretDown } from "react-icons/fa";
 const DiagnosticReport = () => {
   return (
     <>
-      <section className="p-4">
+      <section className="mt-5">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
           {labReports?.map((card) => (
             <div
