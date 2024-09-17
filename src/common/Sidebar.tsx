@@ -45,7 +45,7 @@ const Sidebar = ({ userInfo }: SidebarProps) => {
           style={{ height: "100%", borderRight: 0 }}
           selectedKeys={[selectedKey]}
         >
-          {userInfo.map((user, index) => (
+          {userInfo?.map((user, index) => (
             <Menu.Item
               className={`py-8 ${
                 selectedKey === `${index + 1}` ? "bg-[#D8FCF7]" : ""
@@ -60,16 +60,16 @@ const Sidebar = ({ userInfo }: SidebarProps) => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-4">
                   <img
-                    src={user.profile_picture}
+                    src={user?.profile_picture}
                     alt="profile"
                     className="w-12 h-12 border rounded-full"
                   />
                   <div>
                     <h3 className="mb-[-16px] font-semibold text-black">
-                      {user.name}
+                      {user?.name}
                     </h3>
                     <p className="text-gray-600">
-                      {user.gender}, <span>{user.age}</span>
+                      {user.gender}, <span>{user?.age}</span>
                     </p>
                   </div>
                 </div>
@@ -110,7 +110,7 @@ const Sidebar = ({ userInfo }: SidebarProps) => {
           style={{ height: "100%", borderRight: 0 }}
           selectedKeys={[selectedKey]}
         >
-          {userInfo.map((user, index) => (
+          {userInfo?.map((user, index) => (
             <Menu.Item
               className={`py-8 ${
                 selectedKey === `${index + 1}` ? "bg-[#D8FCF7]" : ""
@@ -128,16 +128,16 @@ const Sidebar = ({ userInfo }: SidebarProps) => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-4">
                   <img
-                    src={user.profile_picture}
+                    src={user?.profile_picture}
                     alt="profile"
                     className="w-12 h-12 border rounded-full"
                   />
                   <div>
                     <h3 className="mb-[-16px] font-semibold text-black">
-                      {user.name}
+                      {user?.name}
                     </h3>
                     <p className="text-gray-600">
-                      {user.gender}, <span>{user.age}</span>
+                      {user?.gender}, <span>{user?.age}</span>
                     </p>
                   </div>
                 </div>
