@@ -247,9 +247,10 @@ export const data: DataType[] = [
 
 
 export const labResults = [
-  { id: 1, test: "Blood Test", result: "Normal", date: "2024-09-01" },
-  { id: 2, test: "X-Ray", result: "Normal", date: "2024-09-05" },
-  { id: 3, test: "MRI", result: "Abnormal", date: "2024-09-10" },
-  { id: 4, test: "CT Scan", result: "Normal", date: "2024-09-12" },
-  { id: 5, test: "Ultrasound", result: "Normal", date: "2024-09-15" },
+  { id: 1, label: "Blood Test", },
+  { id: 2, label: "CT Scans",},
+  { id: 3, label: "Radiology Reports",  },
+  { id: 4, label: "X-Rays", },
+  { id: 5, label: "Urine Test", },
+  { id: 6, label: 'Ultrasound'},
 ];
