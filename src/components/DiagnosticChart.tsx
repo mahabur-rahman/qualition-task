@@ -104,7 +104,7 @@ const DiagnosticChart = () => {
 
   return (
     <>
-      <section className="max-w-4xl p-6 mx-auto bg-white rounded-lg shadow-lg">
+      <section className="max-w-4xl p-6 mx-auto bg-[#F4F0FE] rounded-lg shadow-lg">
         <h3 className="mb-4 text-2xl font-semibold">Diagnosis History</h3>
         <div className="flex justify-between">
           <div className="flex-1">
@@ -119,7 +119,7 @@ const DiagnosticChart = () => {
               <canvas ref={chartRef}></canvas>
             </div>
           </div>
-          <div className="p-4 ml-8 rounded-lg bg-purple-50 w-72">
+          <div className="p-4 ml-8 rounded-lg w-72">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center">
                 <span className="inline-block w-4 h-4 mr-2 bg-pink-500 rounded-full"></span>
@@ -135,7 +135,7 @@ const DiagnosticChart = () => {
 
             <hr className="mb-4 border-gray-300" />
 
-            <div className="flex items-center justify-between mb-2">
+            <div className="flex items-center justify-between mb-2 bg-[#F4F0FE]">
               <div className="flex items-center">
                 <span className="inline-block w-4 h-4 mr-2 bg-indigo-500 rounded-full"></span>
                 <span className="text-sm font-medium text-gray-700">
