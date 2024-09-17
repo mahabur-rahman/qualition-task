@@ -11,7 +11,7 @@ const Dashboard = () => {
   return (
     <Layout className="min-h-screen overflow-hidden">
       <Header />
-      <Layout className="min-h-screen pt-16">
+      <Layout className="min-h-screen pt-8 pb-3 md:pt-16">
         <Sidebar />
         <Layout className="flex flex-col lg:flex-row" style={{ padding: "0" }}>
           <div className="flex-1 p-4 lg:pl-80 lg:pr-4">
