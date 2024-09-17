@@ -21,3 +21,9 @@ export interface UserProfileData extends User {
   diagnosis_history?: any[]; 
   diagnostic_list?: any[]; 
 }
+
+export interface Diagnostic {
+  name: string;
+  description: string;
+  status: string;
+}

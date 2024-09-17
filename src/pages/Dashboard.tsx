@@ -70,7 +70,7 @@ const Dashboard = () => {
                     <DiagnosticChart />
                     <DiagnosticReport />
                   </div>
-                  <DiagnosticListWidget />
+                  <DiagnosticListWidget userInfo={userInfo} />
                 </div>
 
                 <div className="lg:block lg:w-80 lg:bg-[#F6F7F8] lg:rounded-lg lg:p-4">
