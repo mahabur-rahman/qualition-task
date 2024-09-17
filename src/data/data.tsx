@@ -20,7 +20,7 @@ import { DataType } from '../interfaces/dashboard.interface'
 
 export const menuItems = [
   { id: 1, icon: <HomeOutlined />, label: 'Overview' },
-  { id: 2, icon: <UserOutlined />, label: 'Patients', style: 'text-white bg-[#01F0D0] w-[110px]' },
+  { id: 2, icon: <UserOutlined />, label: 'Patients', style: 'text-black bg-[#01F0D0] w-[110px] rounded-full p-2 items-center flex' },
   { id: 3, icon: <CalendarOutlined />, label: 'Schedule' },
   { id: 4, icon: <MessageOutlined />, label: 'Message' },
   { id: 5, icon: <CreditCardOutlined />, label: 'Transactions' },
