@@ -27,3 +27,29 @@ export interface Diagnostic {
   description: string;
   status: string;
 }
+
+
+export interface BloodPressure {
+  systolic: {
+    value: number;
+    levels?: string;
+  };
+  diastolic: {
+    value: number;
+    levels?: string;
+  };
+}
+
+export interface DiagnosisHistoryEntry {
+  month: string;
+  year: string;
+  blood_pressure: BloodPressure;
+}
+
+interface UserInfo {
+  diagnosis_history: DiagnosisHistoryEntry[];
+}
+
+export interface DiagnosticChartProps {
+  userInfo: UserInfo[];
+}

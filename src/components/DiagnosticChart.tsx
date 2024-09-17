@@ -10,6 +10,8 @@ import {
 } from "chart.js";
 import WidgetTitle from "./WidgetTitle";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
+import { DiagnosticChartProps } from "../interfaces/dashboard.interface";
+import DiagnosticReport from "./DiagnosticReport";
 
 Chart.register(
   LineController,
@@ -20,9 +22,33 @@ Chart.register(
   CategoryScale
 );
 
-const DiagnosticChart = () => {
+const DiagnosticChart = ({ userInfo }: DiagnosticChartProps) => {
   const chartRef = useRef<HTMLCanvasElement | null>(null);
   const chartInstanceRef = useRef<Chart | null>(null);
+
+  const actualUser = userInfo[3] || { diagnosis_history: [] };
+  const diagnosisHistory = actualUser.diagnosis_history;
+
+  const labels = diagnosisHistory.map(
+    (entry) => `${entry.month}, ${entry.year}`
+  );
+  const systolicData = diagnosisHistory.map(
+    (entry) => entry.blood_pressure.systolic.value
+  );
+  const diastolicData = diagnosisHistory.map(
+    (entry) => entry.blood_pressure.diastolic.value
+  );
+
+  const latestReading = diagnosisHistory[0] || {
+    blood_pressure: {
+      systolic: { value: 0 },
+      diastolic: { value: 0 },
+    },
+  };
+  const latestSystolic = latestReading.blood_pressure.systolic.value;
+  const latestDiastolic = latestReading.blood_pressure.diastolic.value;
+  const systolicLevel = latestReading.blood_pressure.systolic.levels || "";
+  const diastolicLevel = latestReading.blood_pressure.diastolic.levels || "";
 
   useEffect(() => {
     const ctx = chartRef.current?.getContext("2d");
@@ -35,31 +61,24 @@ const DiagnosticChart = () => {
       chartInstanceRef.current = new Chart(ctx, {
         type: "line",
         data: {
-          labels: [
-            "Oct, 2023",
-            "Nov, 2023",
-            "Dec, 2023",
-            "Jan, 2024",
-            "Feb, 2024",
-            "Mar, 2024",
-          ],
+          labels: labels,
           datasets: [
             {
               label: "Systolic",
-              data: [120, 140, 110, 135, 145, 160],
-              borderColor: "#E66FD2", 
-              backgroundColor: "rgba(230, 111, 210, 0.2)", 
+              data: systolicData,
+              borderColor: "#E66FD2",
+              backgroundColor: "rgba(230, 111, 210, 0.2)",
               fill: true,
-              pointBackgroundColor: "#E66FD2", 
+              pointBackgroundColor: "#E66FD2",
               tension: 0.4,
             },
             {
               label: "Diastolic",
-              data: [100, 60, 100, 85, 65, 80],
-              borderColor: "#8C6FE6", 
+              data: diastolicData,
+              borderColor: "#8C6FE6",
               backgroundColor: "rgba(140, 111, 230, 0.2)",
               fill: true,
-              pointBackgroundColor: "#8C6FE6", 
+              pointBackgroundColor: "#8C6FE6",
               tension: 0.4,
             },
           ],
@@ -103,12 +122,12 @@ const DiagnosticChart = () => {
         chartInstanceRef.current.destroy();
       }
     };
-  }, []);
+  }, [labels, systolicData, diastolicData]);
 
   return (
     <>
       <section className="w-full p-6 mx-auto bg-[#F4F0FE] rounded-lg shadow-lg overflow-hidden">
-        <WidgetTitle label={"Lab Results"} />
+        <WidgetTitle label="Lab Results" />
         <div className="flex justify-between">
           <div className="flex-1">
             <div className="flex items-center justify-between mb-4">
@@ -122,7 +141,7 @@ const DiagnosticChart = () => {
               <canvas ref={chartRef}></canvas>
             </div>
           </div>
-          <div className="p-4 ml-8 rounded-lg w-72">
+          <div className="p-4 ml-8 rounded-lg">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center">
                 <span className="inline-block w-4 h-4 mr-2 bg-[#E66FD2] rounded-full"></span>
@@ -131,15 +150,17 @@ const DiagnosticChart = () => {
                 </span>
               </div>
             </div>
-            <p className="text-[22px]  font-semibold text-[#072635]">160</p>
+            <p className="text-[22px] font-semibold text-[#072635]">
+              {latestSystolic}
+            </p>
             <p className="flex items-center mb-4 text-sm font-medium text-gray-500">
               <span className="mr-1">
                 <FaCaretUp />
               </span>
-              Higher than Average
+              {systolicLevel}
             </p>
             <hr className="mb-4 border-gray-300" />
-            <div className="flex items-center justify-between mb-2 bg-[#F4F0FE]">
+            <div className="flex items-center justify-between mb-2">
               <div className="flex items-center">
                 <span className="inline-block w-4 h-4 mr-2 bg-[#8C6FE6] rounded-full"></span>
                 <span className="text-sm font-medium text-gray-700">
@@ -147,16 +168,20 @@ const DiagnosticChart = () => {
                 </span>
               </div>
             </div>
-            <p className="text-[22px] font-semibold text-[#072635]">78</p>
-            <p className="flex items-center text-sm font-medium text-gray-500">
+            <p className="text-[22px] font-semibold text-[#072635]">
+              {latestDiastolic}
+            </p>
+            <p className="flex items-center mb-4 text-sm font-medium text-gray-500">
               <span className="mr-1">
                 <FaCaretDown />
               </span>
-              Lower than Average
+              {diastolicLevel}
             </p>
           </div>
         </div>
       </section>
+
+      <DiagnosticReport  />
     </>
   );
 };
