@@ -181,7 +181,7 @@ const DiagnosticChart = ({ userInfo }: DiagnosticChartProps) => {
         </div>
       </section>
 
-      <DiagnosticReport  />
+      <DiagnosticReport userInfo={userInfo} />
     </>
   );
 };
