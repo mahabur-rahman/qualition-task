@@ -131,7 +131,7 @@ const Dashboard = () => {
             style={{ marginLeft: 300, padding: "0 24px 24px" }}
             className="grid grid-cols-10 gap-4"
           >
-            <div className="col-span-7 min-h-[280px] rounded-lg">
+            <div className="col-span-7 rounded-lg">
               <div className="p-5 bg-white shadow-sm rounded-xl">
                 <DiagnosticChart />
                 <DiagnosticReport />
@@ -139,7 +139,7 @@ const Dashboard = () => {
               <DiagnosticListWidget />
             </div>
 
-            <div className="col-span-3 p-6 m-0 min-h-[280px] bg-white rounded-lg">
+            <div className="col-span-3 bg-[#F6F7F8] rounded-lg">
               <UserProfile />
               <LabResult />
             </div>

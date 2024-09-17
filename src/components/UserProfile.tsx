@@ -10,7 +10,7 @@ import { userInfo } from "../data/data";
 const UserProfile = () => {
   return (
     <>
-      <section className="max-w-sm mx-auto overflow-hidden bg-white rounded-lg">
+      <section className="mx-auto mt-5 overflow-hidden bg-white rounded-lg shadow-sm">
         <div className="relative">
           <img
             src={userInfo.profileImage}
@@ -62,7 +62,7 @@ const UserProfile = () => {
           </div>
         </div>
 
-        <div className="mb-4 text-center">
+        <div className="text-center mb-7">
           <button className="bg-[#01F0D0] text-black py-2 px-6 rounded-full font-semibold hover:bg-[#01d0b9] focus:outline-none focus:ring-2 focus:ring-[#01F0D0] focus:ring-opacity-50">
             Show All Information
           </button>
