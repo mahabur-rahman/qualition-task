@@ -75,7 +75,7 @@ const Dashboard = () => {
 
                 <div className="lg:block lg:w-80 lg:bg-[#F6F7F8] lg:rounded-lg lg:p-4">
                   <UserProfile userInfo={userInfo} />
-                  <LabResult />
+                  <LabResult userInfo={userInfo} />
                 </div>
               </Layout>
             </>

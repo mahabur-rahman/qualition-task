@@ -17,4 +17,7 @@ export interface UserProfileData extends User {
   phone_number: string;
   emergency_contact: string;
   insurance_type: string;
+  lab_results: string[]; 
+  diagnosis_history?: any[]; 
+  diagnostic_list?: any[]; 
 }

@@ -12,21 +12,21 @@ interface UserProfileProps {
 }
 
 const UserProfile = ({ userInfo }: UserProfileProps) => {
-  const jessica = userInfo[3];
+  const actualUser = userInfo[3];
 
   return (
     <>
-      {jessica ? (
+      {actualUser ? (
         <section className="mx-auto mt-0 overflow-hidden bg-white rounded-lg shadow-sm">
           <div className="relative">
             <img
-              src={jessica.profile_picture}
-              alt="Jessica Taylor"
+              src={actualUser.profile_picture}
+              alt="actualUser Taylor"
               className="w-[150px] h-[150px] mx-auto border-4 border-white rounded-full mt-4"
             />
           </div>
           <div className="my-3 text-center">
-            <h2 className="text-2xl font-semibold">{jessica.name}</h2>
+            <h2 className="text-2xl font-semibold">{actualUser.name}</h2>
           </div>
 
           <div className="px-6 my-6">
@@ -34,21 +34,21 @@ const UserProfile = ({ userInfo }: UserProfileProps) => {
               <CalendarOutlined className="mr-2 text-gray-600" />
               <span>
                 Date of Birth <br />
-                <span className="font-semibold">{jessica.date_of_birth}</span>
+                <span className="font-semibold">{actualUser.date_of_birth}</span>
               </span>
             </div>
             <div className="flex items-center mb-2">
               <WomanOutlined className="mr-2 text-gray-600" />
               <span>
                 Gender <br />
-                <span className="font-semibold">{jessica.gender}</span>
+                <span className="font-semibold">{actualUser.gender}</span>
               </span>
             </div>
             <div className="flex items-center mb-2">
               <PhoneOutlined className="mr-2 text-gray-600" />
               <span>
                 Contact Info <br />
-                <span className="font-semibold">{jessica.phone_number}</span>
+                <span className="font-semibold">{actualUser.phone_number}</span>
               </span>
             </div>
             <div className="flex items-center mb-2">
@@ -56,7 +56,7 @@ const UserProfile = ({ userInfo }: UserProfileProps) => {
               <span>
                 Emergency Contacts <br />
                 <span className="font-semibold">
-                  {jessica.emergency_contact}
+                  {actualUser.emergency_contact}
                 </span>
               </span>
             </div>
@@ -64,7 +64,7 @@ const UserProfile = ({ userInfo }: UserProfileProps) => {
               <SafetyOutlined className="mr-2 text-gray-600" />
               <span>
                 Insurance Provider <br />
-                <span className="font-semibold">{jessica.insurance_type}</span>
+                <span className="font-semibold">{actualUser.insurance_type}</span>
               </span>
             </div>
           </div>
