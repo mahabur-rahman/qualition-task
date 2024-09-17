@@ -8,7 +8,8 @@ import {
   Title,
   CategoryScale,
 } from "chart.js";
-import WidgetTitle from './WidgetTitle';
+import WidgetTitle from "./WidgetTitle";
+import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 
 Chart.register(
   LineController,
@@ -47,19 +48,19 @@ const DiagnosticChart = () => {
             {
               label: "Systolic",
               data: [120, 140, 110, 135, 145, 160],
-              borderColor: "#ec4899",
-              backgroundColor: "rgba(236, 72, 153, 0.2)",
+              borderColor: "#E66FD2", // Updated color
+              backgroundColor: "rgba(230, 111, 210, 0.2)", // Updated color with opacity
               fill: true,
-              pointBackgroundColor: "#ec4899",
+              pointBackgroundColor: "#E66FD2", // Updated color
               tension: 0.4,
             },
             {
               label: "Diastolic",
               data: [80, 85, 75, 70, 76, 78],
-              borderColor: "#6366f1",
-              backgroundColor: "rgba(99, 102, 241, 0.2)",
+              borderColor: "#8C6FE6", // Updated color
+              backgroundColor: "rgba(140, 111, 230, 0.2)", // Updated color with opacity
               fill: true,
-              pointBackgroundColor: "#6366f1",
+              pointBackgroundColor: "#8C6FE6", // Updated color
               tension: 0.4,
             },
           ],
@@ -106,42 +107,58 @@ const DiagnosticChart = () => {
   }, []);
 
   return (
-    <section className="max-w-4xl p-6 mx-auto bg-[#F4F0FE] rounded-lg shadow-lg">
-      <WidgetTitle label={"Lab Results"} />
-      <div className="flex justify-between">
-        <div className="flex-1">
-          <div className="flex items-center justify-between mb-4">
-            <p className="text-lg font-medium">Blood Pressure</p>
-            <select className="px-3 py-1 text-sm bg-transparent border border-gray-300 rounded">
-              <option>Last 6 months</option>
-              <option>Last Year</option>
-            </select>
+    <>
+      <section className="max-w-4xl p-6 mx-auto bg-[#F4F0FE] rounded-lg shadow-lg">
+        <WidgetTitle label={"Lab Results"} />
+        <div className="flex justify-between">
+          <div className="flex-1">
+            <div className="flex items-center justify-between mb-4">
+              <p className="text-lg font-medium">Blood Pressure</p>
+              <select className="px-3 py-1 text-sm bg-transparent border border-gray-300 rounded">
+                <option>Last 6 months</option>
+                <option>Last Year</option>
+              </select>
+            </div>
+            <div className="relative h-64">
+              <canvas ref={chartRef}></canvas>
+            </div>
           </div>
-          <div className="relative h-64">
-            <canvas ref={chartRef}></canvas>
+          <div className="p-4 ml-8 rounded-lg w-72">
+            <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center">
+                <span className="inline-block w-4 h-4 mr-2 bg-[#E66FD2] rounded-full"></span>
+                <span className="text-sm font-medium text-gray-700">
+                  Systolic
+                </span>
+              </div>
+            </div>
+            <p className="text-[22px]  font-semibold text-[#072635]">160</p>
+            <p className="flex items-center mb-4 text-sm font-medium text-gray-500">
+              <span className="mr-1">
+                <FaCaretUp />
+              </span>
+              Higher than Average
+            </p>
+            <hr className="mb-4 border-gray-300" />
+            <div className="flex items-center justify-between mb-2 bg-[#F4F0FE]">
+              <div className="flex items-center">
+                <span className="inline-block w-4 h-4 mr-2 bg-[#8C6FE6] rounded-full"></span>
+                <span className="text-sm font-medium text-gray-700">
+                  Diastolic
+                </span>
+              </div>
+            </div>
+            <p className="text-[22px] font-semibold text-[#072635]">78</p>
+            <p className="flex items-center text-sm font-medium text-gray-500">
+              <span className="mr-1">
+                <FaCaretDown />
+              </span>
+              Lower than Average
+            </p>
           </div>
         </div>
-        <div className="p-4 ml-8 rounded-lg w-72">
-          <div className="flex items-center justify-between mb-2">
-            <div className="flex items-center">
-              <span className="inline-block w-4 h-4 mr-2 bg-pink-500 rounded-full"></span>
-              <span className="text-sm font-medium text-gray-700">Systolic</span>
-            </div>
-            <p className="text-3xl font-semibold text-pink-500">160</p>
-          </div>
-          <p className="mb-4 text-sm font-medium text-gray-500">Higher than Average</p>
-          <hr className="mb-4 border-gray-300" />
-          <div className="flex items-center justify-between mb-2 bg-[#F4F0FE]">
-            <div className="flex items-center">
-              <span className="inline-block w-4 h-4 mr-2 bg-indigo-500 rounded-full"></span>
-              <span className="text-sm font-medium text-gray-700">Diastolic</span>
-            </div>
-            <p className="text-3xl font-semibold text-indigo-500">78</p>
-          </div>
-          <p className="text-sm font-medium text-gray-500">Lower than Average</p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
