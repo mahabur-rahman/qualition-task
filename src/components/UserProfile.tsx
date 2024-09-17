@@ -15,7 +15,7 @@ const UserProfile = () => {
           <img
             src={userInfo.profileImage}
             alt="User"
-            className="w-[150px] h-[150px] mx-auto border-4 border-white rounded-full"
+            className="w-[150px] h-[150px] mx-auto border-4 border-white rounded-full mt-4"
           />
         </div>
         <div className="my-3 text-center">
@@ -62,7 +62,7 @@ const UserProfile = () => {
           </div>
         </div>
 
-        <div className="text-center mb-7">
+        <div className="mb-5 text-center">
           <button className="bg-[#01F0D0] text-black py-2 px-6 rounded-full font-semibold hover:bg-[#01d0b9] focus:outline-none focus:ring-2 focus:ring-[#01F0D0] focus:ring-opacity-50">
             Show All Information
           </button>

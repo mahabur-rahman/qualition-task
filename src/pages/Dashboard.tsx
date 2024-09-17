@@ -44,7 +44,7 @@ const Dashboard = () => {
               </Menu.Item>
             ))}
           </Menu>
-          <div className="flex items-center p-4 bg-white rounded-lg">
+          <div className="flex items-center bg-white rounded-lg">
             <Avatar src={userProfile.avatar} size="large" />
             <div className="px-3 ml-3 border-r">
               <span className="block text-base font-semibold text-gray-900">
@@ -56,13 +56,13 @@ const Dashboard = () => {
             </div>
             <div className="flex">
               <Button
-                icon={<SettingOutlined className="font-bold" />}
+                icon={<SettingOutlined className="font-extrabold" />}
                 shape="circle"
                 className="text-gray-600 bg-transparent border-none hover:text-green-600"
               />
               <Button
                 icon={
-                  <EllipsisOutlined className="font-bold transform rotate-90" />
+                  <EllipsisOutlined className="font-extrabold transform rotate-90" />
                 }
                 shape="circle"
                 className="text-gray-600 bg-transparent border-none hover:text-green-600"
