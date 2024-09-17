@@ -1,11 +1,11 @@
 import { FaDownload } from "react-icons/fa";
 import { labResults } from "../data/data";
-import Title from "./Title";
+import WidgetTitle from "./WidgetTitle";
 
 const LabResult = () => {
   return (
     <section className="px-5 py-8 shadow-lg rounded-xl max-h-[400px] overflow-y-auto scrollbar-custom">
-      <Title label={"Lab Results"} />
+      <WidgetTitle label={"Lab Results"} />
       {labResults.map(({ id, label }) => (
         <div
           key={id}

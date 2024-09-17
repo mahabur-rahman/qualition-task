@@ -1,8 +1,8 @@
-type TitleProps = {
+type WidgetTitleProps = {
   label: string;
 };
 
-const Title = ({ label }: TitleProps) => {
+const WidgetTitle = ({ label }: WidgetTitleProps) => {
   return (
     <>
       <h2 className="mb-8 text-2xl font-bold">{label}</h2>
@@ -10,4 +10,4 @@ const Title = ({ label }: TitleProps) => {
   );
 };
 
-export default Title;
+export default WidgetTitle;

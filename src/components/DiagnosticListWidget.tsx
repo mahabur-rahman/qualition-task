@@ -1,8 +1,8 @@
 import { Table } from "antd";
 import type { TableColumnsType } from "antd";
-import Title from "./Title";
 import { DataType } from "../interfaces/dashboard.interface";
 import { data } from "../data/data";
+import WidgetTitle from "./WidgetTitle";
 
 const columns: TableColumnsType<DataType> = [
   {
@@ -24,7 +24,7 @@ const columns: TableColumnsType<DataType> = [
 
 const DiagnosticListWidget = () => (
   <div className="px-5 py-8 shadow-lg rounded-xl">
-    <Title label={"Diagnostic List"} />
+    <WidgetTitle label={"Diagnostic List"} />
     <div className="overflow-y-auto scrollbar-custom" style={{ maxHeight: "240px" }}>
       <Table
         columns={columns}
