@@ -23,7 +23,7 @@ const Dashboard = () => {
   return (
     <>
       <Layout className="min-h-screen">
-        <Header className="flex items-center justify-between px-4 bg-white">
+        <Header className="fixed top-0 z-10 flex items-center justify-between w-full px-4 bg-white">
           <div className="flex items-center">
             <img src={companyLogo} alt="Tech.Care Logo" className="h-10 mr-3" />
           </div>
@@ -71,13 +71,17 @@ const Dashboard = () => {
           </div>
         </Header>
 
-        <Layout className="p-6">
+        <Layout style={{ paddingTop: 64 }} className="min-h-screen">
           <Sider
             width={300}
             style={{
               background: colorBgContainer,
-              height: "100vh",
+              height: "calc(100vh - 64px)", 
+              position: "fixed",
+              top: 64,
+              left: 0,
               overflowY: "auto",
+              zIndex: 1, 
             }}
             className="py-3 sider-custom-scrollbar"
           >
@@ -124,7 +128,7 @@ const Dashboard = () => {
           </Sider>
 
           <Layout
-            style={{ padding: "0 24px 24px" }}
+            style={{ marginLeft: 300, padding: "0 24px 24px" }}
             className="grid grid-cols-10 gap-4"
           >
             <div className="col-span-7 p-6 m-0 min-h-[280px] bg-white rounded-lg">
