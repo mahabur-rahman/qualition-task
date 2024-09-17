@@ -253,4 +253,13 @@ export const labResults = [
   { id: 4, label: "X-Rays", },
   { id: 5, label: "Urine Test", },
   { id: 6, label: 'Ultrasound'},
+  { id: 7, label: "MRI Scan" },
+  { id: 8, label: "Liver Function Test" },
+  { id: 9, label: "Kidney Function Test" },
+  { id: 10, label: "Complete Blood Count" },
+  { id: 11, label: "ECG" },
+  { id: 12, label: "Allergy Test" },
+  { id: 13, label: "Blood Sugar Test" },
+  { id: 14, label: "Thyroid Function Test" },
+  { id: 15, label: "Vitamin D Test" },
 ];

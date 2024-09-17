@@ -128,7 +128,7 @@ const Dashboard = () => {
           </Sider>
 
           <Layout
-            style={{ marginLeft: 300, padding: "0 24px 24px" }}
+            style={{ marginLeft: 300, padding: "25px 24px 24px" }}
             className="grid grid-cols-10 gap-4"
           >
             <div className="col-span-7 rounded-lg">

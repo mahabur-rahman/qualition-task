@@ -10,7 +10,7 @@ import { userInfo } from "../data/data";
 const UserProfile = () => {
   return (
     <>
-      <section className="mx-auto mt-5 overflow-hidden bg-white rounded-lg shadow-sm">
+      <section className="mx-auto mt-0 overflow-hidden bg-white rounded-lg shadow-sm">
         <div className="relative">
           <img
             src={userInfo.profileImage}
