@@ -9,12 +9,12 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 z-10 flex items-center justify-between w-full px-4 py-2 bg-white shadow-sm lg:px-8 xl:px-10">
+      <header className="fixed top-0 z-10 flex items-center justify-between w-full px-4 py-2 overflow-hidden bg-white shadow-sm lg:px-8 xl:px-10">
         <div className="flex items-center">
           <img
             src={companyLogo}
             alt="Tech.Care Logo"
-            className="h-8 mr-2 sm:h-10 sm:mr-3"
+            className="h-8 mr-2 cursor-pointer sm:h-10 sm:mr-3"
           />
         </div>
 
