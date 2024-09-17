@@ -62,7 +62,7 @@ const UserProfile = () => {
           </div>
         </div>
 
-        <div className="mb-6 text-center">
+        <div className="mb-4 text-center">
           <button className="bg-[#01F0D0] text-black py-2 px-6 rounded-full font-semibold hover:bg-[#01d0b9] focus:outline-none focus:ring-2 focus:ring-[#01F0D0] focus:ring-opacity-50">
             Show All Information
           </button>

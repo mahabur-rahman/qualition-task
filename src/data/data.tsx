@@ -11,6 +11,9 @@ import patientTen from '../assets/patient10.png'
 import patientEleven from '../assets/patient11.png'
 import patientTwelve from '../assets/patient12.png'
 import profile from "../assets/profile.png";
+import heart from '../assets/heart.png';
+import temperature from '../assets/temperature.png';
+import heartBP from '../assets/HeartBP.png';
 
 import { CalendarOutlined, CreditCardOutlined, EllipsisOutlined, HomeOutlined, MessageOutlined, UserOutlined } from "@ant-design/icons";
 
@@ -138,3 +141,31 @@ export const userInfo = {
   profileImage:
     "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 };
+
+
+ export const labReports = [
+  {
+    id: 1,
+    image: heart,
+    title: 'Respiratory Rate',
+    value: '20 bpm',
+    status: 'Normal',
+    bgColor: '#E0F3FA', 
+  },
+  {
+    id: 2,
+    image: temperature,
+    title: 'Temperature',
+    value: '98.6°F',
+    status: 'Normal',
+    bgColor: '#FFE6E9',
+  },
+  {
+    id: 3,
+    image: heartBP,
+    title: 'Heart Rate',
+    value: '78 bpm',
+    status: 'Lower than Average',
+    bgColor: '#FFE6F1',
+  },
+];

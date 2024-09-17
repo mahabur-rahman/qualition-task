@@ -1,11 +1,11 @@
-
 const DiagnosticChart = () => {
   return (
-    <div>
+    <>
+      <section>
+        <h3 className="bg-red-600 h-[300px]">Diagnosis History</h3>
+      </section>
+    </>
+  );
+};
 
-        className="h-screen py-3 overflow-y-auto bg-white sider-custom-scrollbar"
-    </div>
-  )
-}
-
-export default DiagnosticChart
+export default DiagnosticChart;
