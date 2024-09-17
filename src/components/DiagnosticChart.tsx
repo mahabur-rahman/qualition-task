@@ -55,7 +55,7 @@ const DiagnosticChart = () => {
             },
             {
               label: "Diastolic",
-              data: [80, 85, 75, 70, 76, 78],
+              data: [100, 60, 100, 85, 65, 80],
               borderColor: "#8C6FE6", 
               backgroundColor: "rgba(140, 111, 230, 0.2)",
               fill: true,
