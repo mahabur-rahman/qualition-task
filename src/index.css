@@ -14,6 +14,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  background: rgb(0, 0, 0);
 }
 
 ul {
@@ -65,4 +66,8 @@ a {
 
 .horizontal-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+:where(.css-dev-only-do-not-override-1gwfwyx).ant-table-wrapper .ant-table-pagination.ant-pagination {
+  display: none;
 }

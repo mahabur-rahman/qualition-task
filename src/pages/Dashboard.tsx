@@ -10,6 +10,7 @@ import { useState } from "react";
 import DiagnosticChart from "../components/DiagnosticChart";
 import UserProfile from "../components/UserProfile";
 import DiagnosticReport from "../components/DiagnosticReport";
+import DiagnosticListWidget from "../components/DiagnosticListWidget";
 
 const { Header, Sider } = Layout;
 
@@ -128,6 +129,7 @@ const Dashboard = () => {
             <div className="col-span-7 p-6 m-0 min-h-[280px] bg-white rounded-lg">
               <DiagnosticChart />
               <DiagnosticReport />
+              <DiagnosticListWidget />
             </div>
 
             <div className="col-span-3 p-6 m-0 min-h-[280px] bg-white rounded-lg">
