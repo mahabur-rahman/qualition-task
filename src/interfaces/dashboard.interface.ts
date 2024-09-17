@@ -4,3 +4,11 @@ export interface DataType {
     description: string;
     address: string;
   }
+
+
+export interface User {
+  profile_picture: string;
+  name: string;
+  gender: string;
+  age: number;
+}

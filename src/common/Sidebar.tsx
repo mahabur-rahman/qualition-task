@@ -1,15 +1,18 @@
 import { SearchOutlined, MenuOutlined, CloseOutlined } from "@ant-design/icons";
 import { Menu, Layout, Drawer, Button } from "antd";
-import { sideMenuItems } from "../data/data";
 import { useState } from "react";
+import { User } from "../interfaces/dashboard.interface";
 const { Sider } = Layout;
 
-const Sidebar = () => {
-  const [selectedKey, setSelectedKey] = useState("4");
-  const [isDrawerVisible, setIsDrawerVisible] = useState(false); // Drawer visibility state
+interface SidebarProps {
+  userInfo: User[];
+}
+
+const Sidebar = ({ userInfo }: SidebarProps) => {
+  const [selectedKey, setSelectedKey] = useState<string>("4");
+  const [isDrawerVisible, setIsDrawerVisible] = useState<boolean>(false);
   const colorBgContainer = "#fff";
 
-  // Handle opening and closing of drawer
   const showDrawer = () => {
     setIsDrawerVisible(true);
   };
@@ -20,7 +23,6 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Sidebar for screens >= 992px */}
       <Sider
         width={300}
         style={{
@@ -43,40 +45,40 @@ const Sidebar = () => {
           style={{ height: "100%", borderRight: 0 }}
           selectedKeys={[selectedKey]}
         >
-          {sideMenuItems.map((item) => (
+          {userInfo.map((user, index) => (
             <Menu.Item
-              className={`py-8 ${item.key === "4" ? "bg-[#D8FCF7]" : ""}`}
-              key={item.key}
-              onClick={() => setSelectedKey(item.key)}
+              className={`py-8 ${
+                selectedKey === `${index + 1}` ? "bg-[#D8FCF7]" : ""
+              }`}
+              key={`${index + 1}`}
+              onClick={() => setSelectedKey(`${index + 1}`)}
               style={{
                 backgroundColor:
-                  selectedKey === item.key ? "#D8FCF7" : "transparent",
+                  selectedKey === `${index + 1}` ? "#D8FCF7" : "transparent",
               }}
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-4">
                   <img
-                    src={item.icon}
-                    alt="menu item"
+                    src={user.profile_picture}
+                    alt="profile"
                     className="w-12 h-12 border rounded-full"
                   />
                   <div>
                     <h3 className="mb-[-16px] font-semibold text-black">
-                      {item.name}
+                      {user.name}
                     </h3>
                     <p className="text-gray-600">
-                      {item.gender}, <span>{item.age}</span>
+                      {user.gender}, <span>{user.age}</span>
                     </p>
                   </div>
                 </div>
-                <div>{item.rightIcon}</div>
               </div>
             </Menu.Item>
           ))}
         </Menu>
       </Sider>
 
-      {/* Hamburger button for mobile screens */}
       <div className="fixed z-20 lg:hidden top-4 left-4">
         <Button
           icon={<MenuOutlined />}
@@ -85,7 +87,6 @@ const Sidebar = () => {
         />
       </div>
 
-      {/* Mobile Drawer */}
       <Drawer
         title={
           <div className="flex items-center justify-between">
@@ -100,7 +101,7 @@ const Sidebar = () => {
         placement="left"
         onClose={closeDrawer}
         visible={isDrawerVisible}
-        bodyStyle={{ padding: 0 }} // Remove padding for body content
+        bodyStyle={{ padding: 0 }}
         width={300}
         closeIcon={null}
       >
@@ -109,36 +110,37 @@ const Sidebar = () => {
           style={{ height: "100%", borderRight: 0 }}
           selectedKeys={[selectedKey]}
         >
-          {sideMenuItems.map((item) => (
+          {userInfo.map((user, index) => (
             <Menu.Item
-              className={`py-8 ${item.key === "4" ? "bg-[#D8FCF7]" : ""}`}
-              key={item.key}
+              className={`py-8 ${
+                selectedKey === `${index + 1}` ? "bg-[#D8FCF7]" : ""
+              }`}
+              key={`${index + 1}`}
               onClick={() => {
-                setSelectedKey(item.key);
-                closeDrawer(); // Close drawer on item click
+                setSelectedKey(`${index + 1}`);
+                closeDrawer();
               }}
               style={{
                 backgroundColor:
-                  selectedKey === item.key ? "#D8FCF7" : "transparent",
+                  selectedKey === `${index + 1}` ? "#D8FCF7" : "transparent",
               }}
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-4">
                   <img
-                    src={item.icon}
-                    alt="menu item"
+                    src={user.profile_picture}
+                    alt="profile"
                     className="w-12 h-12 border rounded-full"
                   />
                   <div>
                     <h3 className="mb-[-16px] font-semibold text-black">
-                      {item.name}
+                      {user.name}
                     </h3>
                     <p className="text-gray-600">
-                      {item.gender}, <span>{item.age}</span>
+                      {user.gender}, <span>{user.age}</span>
                     </p>
                   </div>
                 </div>
-                <div>{item.rightIcon}</div>
               </div>
             </Menu.Item>
           ))}

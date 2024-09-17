@@ -5,7 +5,7 @@ const DiagnosticReport = () => {
   return (
     <>
       <section className="mt-5 overflow-hidden">
-        <div className="container px-4 mx-auto">
+        <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             {labReports?.map((card) => (
               <div
