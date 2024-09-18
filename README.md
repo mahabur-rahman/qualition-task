@@ -12,7 +12,7 @@ Make sure you have the following installed:
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/mahabur-rahman/innoscripta.git
+    git clone https://github.com/mahabur-rahman/qualition-task.git
     cd your-repository
     ```
 
@@ -61,30 +61,4 @@ Using npm:
 ```bash
 npm run build
 ```
-
-# Using Docker Container
-
-1. **Build the Docker image:**
-
-    Open your terminal and run:
-
-    ```bash
-    docker build -t react-app:dev .
-    ```
-    
-2. **Check the docker image first**
-
-    ```bash
-    docker images
-    ```
-
-
-3. **Run the Docker container:**
-
-    ```bash
-    docker run -p 5173:5173 react-app:dev
-    ```
-
-    This maps port `5173` in the container to port `5173` on your host machine. You should be able to view the application at [http://localhost:5173](http://localhost:5173).
-
 
