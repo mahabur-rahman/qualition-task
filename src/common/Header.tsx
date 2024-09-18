@@ -39,7 +39,7 @@ const Header = () => {
 
         {/* Right Side Profile and Settings */}
         <div className="flex items-center space-x-1">
-          <Avatar src={userProfile.avatar} size="medium" /> {/* Adjusted avatar size */}
+        <Avatar src={userProfile.avatar} size="large" /> {/* Adjusted avatar size */}
           <div className="hidden md:block sm:ml-2">
             <span className="block text-sm font-semibold text-gray-900">
               {userProfile.name}
