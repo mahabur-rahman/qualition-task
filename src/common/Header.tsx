@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <>
-    <h1 className="text-2xl">sdfdsfdsfdsfdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsds</h1>
+
       <header className="fixed top-0 z-10 flex items-center justify-between w-full px-4 py-3 bg-white shadow-sm md:px-6 lg:px-8">
         <div className="flex items-center">
           <img
@@ -17,6 +17,7 @@ const Header = () => {
             alt="Tech.Care Logo"
             className="h-8 mr-2 cursor-pointer sm:h-10"
           />
+              <h1 className="text-2xl">sdfdsfdsfdsfdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsds</h1>
         </div>
 
         <div className="items-center justify-center flex-grow hidden space-x-4 md:flex">
