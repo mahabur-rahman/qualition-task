@@ -1,4 +1,9 @@
-import { SearchOutlined, MenuOutlined, CloseOutlined } from "@ant-design/icons";
+import {
+  SearchOutlined,
+  MenuOutlined,
+  CloseOutlined,
+  EllipsisOutlined,
+} from "@ant-design/icons";
 import { Menu, Layout, Drawer, Button } from "antd";
 import { useState } from "react";
 import { User } from "../interfaces/dashboard.interface";
@@ -57,7 +62,7 @@ const Sidebar = ({ userInfo }: SidebarProps) => {
                   selectedKey === `${index + 1}` ? "#D8FCF7" : "transparent",
               }}
             >
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between w-full">
                 <div className="flex items-center space-x-4">
                   <img
                     src={user?.profile_picture}
@@ -73,6 +78,7 @@ const Sidebar = ({ userInfo }: SidebarProps) => {
                     </p>
                   </div>
                 </div>
+                <EllipsisOutlined className="text-red-500" />
               </div>
             </Menu.Item>
           ))}
@@ -116,16 +122,13 @@ const Sidebar = ({ userInfo }: SidebarProps) => {
                 selectedKey === `${index + 1}` ? "bg-[#D8FCF7]" : ""
               }`}
               key={`${index + 1}`}
-              onClick={() => {
-                setSelectedKey(`${index + 1}`);
-                closeDrawer();
-              }}
+              onClick={() => setSelectedKey(`${index + 1}`)}
               style={{
                 backgroundColor:
                   selectedKey === `${index + 1}` ? "#D8FCF7" : "transparent",
               }}
             >
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between w-full">
                 <div className="flex items-center space-x-4">
                   <img
                     src={user?.profile_picture}
@@ -137,10 +140,11 @@ const Sidebar = ({ userInfo }: SidebarProps) => {
                       {user?.name}
                     </h3>
                     <p className="text-gray-600">
-                      {user?.gender}, <span>{user?.age}</span>
+                      {user.gender}, <span>{user?.age}</span>
                     </p>
                   </div>
                 </div>
+                <EllipsisOutlined className="text-red-500" />
               </div>
             </Menu.Item>
           ))}
