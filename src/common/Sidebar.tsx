@@ -78,7 +78,7 @@ const Sidebar = ({ userInfo }: SidebarProps) => {
                     </p>
                   </div>
                 </div>
-                <EllipsisOutlined className="text-red-500" />
+                <EllipsisOutlined className="text-black" />
               </div>
             </Menu.Item>
           ))}

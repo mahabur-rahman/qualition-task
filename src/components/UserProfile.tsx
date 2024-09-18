@@ -29,7 +29,7 @@ const UserProfile = ({ userInfo }: UserProfileProps) => {
             <h2 className="text-2xl font-semibold">{actualUser.name}</h2>
           </div>
 
-          <div className="px-6 my-6">
+          <div className="px-6 my-6 text-[14px]">
             <div className="flex items-center mb-2">
               <CalendarOutlined className="mr-2 text-gray-600" />
               <span>
