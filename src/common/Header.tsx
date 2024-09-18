@@ -15,32 +15,32 @@ const Header = () => {
           <img
             src={companyLogo}
             alt="Tech.Care Logo"
-            className="h-8 mr-2 cursor-pointer sm:h-10"
+            className="h-6 mr-2 cursor-pointer sm:h-8" // Reduced height for smaller screens
           />
         </div>
 
         {/* Centered Menu (only visible on medium and larger screens) */}
-        <div className="items-center justify-center flex-grow hidden space-x-4 md:flex">
+        <div className="items-center justify-center flex-grow hidden space-x-2 md:flex">
           {menuItems.map((menu) => (
             <div
               key={menu.id}
               onClick={() => setActiveMenuId(menu.id)}
-              className={`py-2 px-3 text-sm font-semibold cursor-pointer rounded-full ${
+              className={`py-1 px-2 text-sm font-semibold cursor-pointer rounded-full ${
                 menu.id === activeMenuId ? "bg-[#01F0D0]" : ""
               } ${menu.id === 2 ? menu.style : ""}`}
             >
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-1">
                 {menu.icon && <span>{menu.icon}</span>}
-                <span>{menu.label}</span>
+                <span className="text-xs md:text-sm">{menu.label}</span> {/* Reduced font size */}
               </div>
             </div>
           ))}
         </div>
 
         {/* Right Side Profile and Settings */}
-        <div className="flex items-center space-x-2">
-          <Avatar src={userProfile.avatar} size="large" />
-          <div className="hidden sm:block sm:ml-2">
+        <div className="flex items-center space-x-1">
+          <Avatar src={userProfile.avatar} size="medium" /> {/* Adjusted avatar size */}
+          <div className="hidden md:block sm:ml-2">
             <span className="block text-sm font-semibold text-gray-900">
               {userProfile.name}
             </span>
@@ -50,7 +50,7 @@ const Header = () => {
           </div>
 
           {/* Icons */}
-          <div className="flex space-x-1 sm:space-x-2">
+          <div className="flex space-x-1">
             <button className="p-2 text-gray-600 hover:text-green-600">
               <SettingOutlined />
             </button>
