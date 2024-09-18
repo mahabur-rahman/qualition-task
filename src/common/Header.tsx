@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <>
-
+      {/* Main Header */}
       <header className="fixed top-0 z-10 flex items-center justify-between w-full px-4 py-3 bg-white shadow-sm md:px-6 lg:px-8">
         <div className="flex items-center">
           <img
@@ -17,9 +17,9 @@ const Header = () => {
             alt="Tech.Care Logo"
             className="h-8 mr-2 cursor-pointer sm:h-10"
           />
-              <h1 className="text-2xl">sdfdsfdsfdsfdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsds</h1>
         </div>
 
+        {/* Centered Menu (only visible on medium and larger screens) */}
         <div className="items-center justify-center flex-grow hidden space-x-4 md:flex">
           {menuItems.map((menu) => (
             <div
@@ -37,6 +37,7 @@ const Header = () => {
           ))}
         </div>
 
+        {/* Right Side Profile and Settings */}
         <div className="flex items-center space-x-2">
           <Avatar src={userProfile.avatar} size="large" />
           <div className="hidden sm:block sm:ml-2">
@@ -48,6 +49,7 @@ const Header = () => {
             </span>
           </div>
 
+          {/* Icons */}
           <div className="flex space-x-1 sm:space-x-2">
             <button className="p-2 text-gray-600 hover:text-green-600">
               <SettingOutlined />
@@ -59,6 +61,7 @@ const Header = () => {
         </div>
       </header>
 
+      {/* Mobile Menu (visible on smaller screens) */}
       <div className="flex justify-center w-full py-2 bg-white shadow-sm md:hidden">
         {menuItems.map((menu) => (
           <div
